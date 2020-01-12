@@ -40,6 +40,10 @@ Given a community dataset and a set of predictor physico-chemical variables, PER
 
 ![Beta_diversity 2020-01-12 20_43_55](https://user-images.githubusercontent.com/30604050/72225333-68483180-357c-11ea-9d30-ba3b41698e10.gif)
 
+<gif-player src="https://user-images.githubusercontent.com/30604050/72225333-68483180-357c-11ea-9d30-ba3b41698e10.gif" speed="0.5" play></gif-player>
+
+<gif-player src="https://media.giphy.com/media/nh5QMbO89SFTG/giphy.gif" size="contain" prerender style="width:300px;height:200px"></gif-player>
+
 
 ## Integrated ‘omics analysis
 Integrative analysis methods can provide better understanding and interpretation of the composite biological datasets and help elucidate the dynamics of the complex biological systems at a greater scale. CViewer, implements three different techniques that have been proposed for a simultaneous analysis of multiple omics datasets, namely Simultaneous Component Analysis with rotation to COmmon and DIstinctive components (DISCO- SCA), Joint and Individual Variation Explained (JIVE) and Two-way Orthogonal Partial Least Squares (O2PLS). All of them are helpful for providing a “global” view on the biological system of interest by decomposing the variability of the composite omics datasets into a joint variability or common structure, that represents the mechanisms underlying all of the omics datasets under study, and individual variability or distinctive structure, that represents the biological mechanisms underlying a single omics dataset.
