@@ -38,11 +38,7 @@ In fuzzy set ordination samples are assigned gradual membership values (fuzzy) r
 ### Permutational Multivariate Analysis of Variance
 Given a community dataset and a set of predictor physico-chemical variables, PERMANOVA can be used to provide information about the percentage of variation (R2) explained by the given predictors and the significance associated with it (P-value). The results of the PERMANOVA analysis are exported into a summary file containing sources of variation, degrees of freedom, sequential sums of squares, mean squares, K statistics, partial R-squared and P-values, based on N permutations. In addition, the percentage (%) of variation explained (R2) by different predictor variables with annotation for significance can be visualized in the software in the form of a Bar Plot or a Pie chart.
 
-![Beta_diversity 2020-01-12 20_43_55](https://user-images.githubusercontent.com/30604050/72225333-68483180-357c-11ea-9d30-ba3b41698e10.gif)
-
-<gif-player src="https://user-images.githubusercontent.com/30604050/72225333-68483180-357c-11ea-9d30-ba3b41698e10.gif" speed="0.5" play></gif-player>
-
-<gif-player src="https://media.giphy.com/media/nh5QMbO89SFTG/giphy.gif" size="contain" prerender style="width:300px;height:200px"></gif-player>
+<gif-player src="https://user-images.githubusercontent.com/30604050/72225333-68483180-357c-11ea-9d30-ba3b41698e10.gif" size="contain" play bounce style="width: 240px; height: 160px;"></gif-player>
 
 
 ## Integrated ‘omics analysis
