@@ -59,5 +59,3 @@ Before we choose any of the given methods to perform component analysis, one mus
 
 ## Charts
 CViewer implements also a separate tab for the visualisation of charts, with a Line Chart and a Box Plot Chart being supported by the software. This feature is primarily provided as an extra visualisation tool where it is possible to display information as a series of data points, particularly in the case of the Line Chart, and explore trends and patterns between pairs of variables (described from the X and Y axes). For each graph, it is possible to colour the data according to a specific grouping variable of interest. In addition, the Box Plot chart can represent every kind of interval observation using five different measures, i.e. the min, the max, the median and the lower and upper quartiles. This can be a very useful tool when ones need to display the distribution of data, identify outliers, and inspect if and how symmetrical or skewed the data are.
-
-![Charts 2020-01-19 21_33_44](https://user-images.githubusercontent.com/30604050/72688881-9d67fd00-3b03-11ea-8fe6-6b01fb944f0d.gif)
