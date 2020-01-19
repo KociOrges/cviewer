@@ -18,6 +18,8 @@ Differential abundance analysis can be valuable when investigating for features 
 ## Correlation
 We have considered the Pearson’s product-moment coefficient to measure the degree of the association between two continuous variables, the Kendall’s tau coefficient to compare two quantities measured on at least an ordinal scale and the Spearman’s rank-order correlation as the nonparametric alternative of Pearson’s product-moment coefficient. Prior to analysis, the input tables can be normalized, filtered and/or sorted according to threshold values provided from the user. For a selected correlation coefficient, a full report can be displayed containing the correlation value (R) and the statistical significance (p-value and adjusted p-value) obtained for each pairwise comparison between the elements of the two data matrices.
 
+![Differential_abundance Correlation 2020-01-19 21_09_30](https://user-images.githubusercontent.com/30604050/72688522-0188c200-3b00-11ea-9624-7c862fe4e743.gif)
+
 ## Phylogenetic diversity
 In CViewer, we have considered two  metrics which have been been suggested by Webb (2000) and proved useful for phylogenetic structure analysis, as a measure of phylogenetic clustering or overdispersion, namely the Net Relatedness Index (NRI) and Nearest Taxon Index (NTI). The first focuses on overall clustering, while the latter is more sensitive for capturing the clustering or overdispersion around the tips of the phylogenetic tree. Both metrics become positive as clustering increases and negative with overdispersion. 
 
