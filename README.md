@@ -9,10 +9,9 @@ The past few years have seen an increased utility of shotgun metagenomics for mi
 
 <img src="https://user-images.githubusercontent.com/30604050/73015452-f5f50e00-3e13-11ea-9110-dd0feb8b86d1.gif" width="900" height="550" />
 
-![KEGG_pathways](https://user-images.githubusercontent.com/30604050/73015453-f68da480-3e13-11ea-91de-f63ed4552013.gif)
+<img src="https://user-images.githubusercontent.com/30604050/73015453-f68da480-3e13-11ea-91de-f63ed4552013.gif" width="900" height="550" />
 
-![Phylogenetic_diversity](https://user-images.githubusercontent.com/30604050/73015454-f68da480-3e13-11ea-948d-adb888c553db.gif)
-
+<img src="https://user-images.githubusercontent.com/30604050/73015454-f68da480-3e13-11ea-948d-adb888c553db.gif" width="900" height="550" />
 
 
 ## Alpha diversity
