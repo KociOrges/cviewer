@@ -1,0 +1,17 @@
+﻿Sample IDs,Condition,Gender,Group,Timepoint
+cov_mean_sample_Sample118,CD,Male,Relative,A
+cov_mean_sample_Sample120,CD,Male,Relative,A
+cov_mean_sample_Sample127,CD,Male,Non Relative,A
+cov_mean_sample_Sample134,CD,Male,Relative,B
+cov_mean_sample_Sample177,CD,Male,Non Relative,B
+cov_mean_sample_Sample215,CD,Male,Relative,C
+cov_mean_sample_Sample230,CD,Male,Relative,A
+cov_mean_sample_Sample234,CD,Male,Relative,B
+cov_mean_sample_Sample244,H,Female,Non Relative,C
+cov_mean_sample_Sample261,H,Female,Non Relative,C
+cov_mean_sample_Sample263,H,Female,Non Relative,C
+cov_mean_sample_Sample290,H,Female,Non Relative,
+cov_mean_sample_Sample302,H,Male,Relative,A
+cov_mean_sample_Sample321,H,Male,Non Relative,B
+cov_mean_sample_Sample330,H,Male,Relative,B
+cov_mean_sample_Sample343,H,Male,Relative,A
