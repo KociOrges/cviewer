@@ -16,14 +16,14 @@ Here you will download a copy of the code and place it somewhere in your directo
 $ git clone https://github.com/KociOrges/cviewer.git
 ```
 
-**Step 2: Unzipping required files **
+**Step 2: Unzipping required files**
 ```
 $ cd cviewer
 $ unzip Utils.zip
 $ unzip Output.zip
 ```
 
-## Usage
+**Usage**
 Once that is done, you can start using CViewer. This can be done by just double-clicking the executable ```CViewer.jar``` file provided in the directory ```cviewer/```.
 
 ## Visualisation features
