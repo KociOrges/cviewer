@@ -8,7 +8,7 @@
 ## Introduction to CViewer
 The past few years have seen an increased utility of shotgun metagenomics for microbial community surveys over traditional amplicon sequencing. This is made possible by the technological advancement in methods development that enables us now to assemble short sequence reads into longer contiguous regions that can be binned together to identify species they are part of (e.g., through CONCOCT software), and their coding regions can further be annotated against public databases to give an assessment of functional diversity. At the same time, integrated solutions are gaining importance through complementing meta’omics technologies. To consolidate all these realisations on the same sample space, and to fully delineate microbial activity response to environmental factors, it is necessary to include and integrate all levels of gene products, mRNA, protein, metabolites, as well as their interactions in a single platform. Hence, we introduce CViewer, a Java-based software, that integrates with output data from CONCOCT as well as major third party taxonomic and annotation software. The software provides a comprehensive set of multivariate statistical algorithms using the theoretical underpinning of numerical ecology to allow exploratory as well as hypothesis driven analyses. The end result is a highly interactive toolkit with multiple document interface, that makes it easier to unravel useful patterns through Point-and-Click tools whether it is looking at annotated tracks of metagenomic contigs, or exploring enrichments of metabolic pathways and microbial species. 
 
-## Installing
+## Installation & usage
 **Step 1: Cloning the repository**
 
 Here you will download a copy of the code and place it somewhere in your directory.
@@ -24,6 +24,7 @@ $ unzip Output.zip
 ```
 
 **Usage**
+
 Once that is done, you can start using CViewer. This can be done by just double-clicking the executable ```CViewer.jar``` file provided in the directory ```cviewer/```.
 
 ## Visualisation features
