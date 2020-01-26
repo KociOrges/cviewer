@@ -1,4 +1,6 @@
-#    ```CViewer:```A Java-based integrated analysis toolkit for whole-genome shotgun metagenomics and other meta’omics technologies
+<p style='text-align: justify;'>
+#    ```CViewer``` A Java-based integrated analysis toolkit for whole-genome shotgun metagenomics and other meta’omics technologies
+</p>
 
 ```diff
 - Please note that the repository for this project is still under construction!
