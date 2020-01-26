@@ -1,6 +1,6 @@
-<p style='text-align: justify;'>
+<div style="text-align: justify">
 #    ```CViewer``` A Java-based integrated analysis toolkit for whole-genome shotgun metagenomics and other meta’omics technologies
-</p>
+</div>
 
 ```diff
 - Please note that the repository for this project is still under construction!
