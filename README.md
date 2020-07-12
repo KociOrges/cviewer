@@ -58,8 +58,7 @@ Click the **Open** button next to
 * ```Clustering:``` for the file that gives the labelling of which cluster each contig belongs to (e.g. clustering_gt1000.csv)
 * ```Taxonomy:``` for the file that contains the taxonomic information for the dataset (e.g. taxonomy.csv)
 
-This is also illustrated in the following animation
-[![Alt text](https://img.youtube.com/vi/DmD4qEQ71mc&feature=youtu.be/0.jpg)](https://www.youtube.com/watch?v=DmD4qEQ71mc&feature=youtu.be)
+This is also illustrated in the following [![animation](https://i9.ytimg.com/vi/DmD4qEQ71mc/mq2.jpg?sqp=CISErvgF&rs=AOn4CLA83rO0YH-Kv9HNrBPC7rfismWcUg)](https://www.youtube.com/watch?v=DmD4qEQ71mc&feature=youtu.be)
 
 One can explore the annotated genomic features for the contigs of the dataset by visualizing the CDS regions picked from GenBank file (given from PROKKA, https://github.com/tseemann/prokka), with a means to switch the labels to specific genes or those that were assigned an enzyme identifier. A legend describing summary statistics for the given contig is displayed on the bottom-left part of the panel including length, number of CDS regions, genes and enzyme identifiers. One can also search the identified protein sequences against NCBI’s **Conserved Domain Databases (CDD)**. CDD is a protein annotation resource that consists of a collection of well-annotated multiple sequence alignment models for ancient domains and full-length proteins. Once the CDDs are obtained, we can then use the scripts provided with ```CViewer``` to assign them to **Clusters of Orthologous Groups (COGs)**. Each COG consists of a group of proteins found to be orthologous across at least three lineages and likely corresponds to an ancient conserved domain. This annotation process provides an alternative for rapidly describing the functional characteristics of a community of microbes. 
 
