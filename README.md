@@ -32,32 +32,31 @@ $ unzip Output.zip
 Once that is done, you can start using CViewer. This can be done by just double-clicking the executable ```CViewer.jar``` file provided in the directory ```cviewer/```.
 
 
-## Visualisation of clustering & coverage of metagenomics contigs
+## Visualising the metagenomics contigs
 
 ```CViewer``` integrates with CONCOCT pipeline (https://github.com/BinPro/CONCOCT) for visualising the contigs. The output from CONCOCT can be loaded into the software to inspect the clustering of the contigs across multiple components of the PCA analysis. The PCA plot shows contigs as points with unique coloring to identify the species they belong to (contigs binning is done by the CONCOCT software). The size of the points in PCA space shows the coverages of the contigs and serves as  a visual cue for the species that are abundant in a given sample with a slider bar giving a means to shift between samples. Additional metadata available on the samples including the treatment groups (say case-control groups) can be uploaded to the software.
 
 **Step 1: Collecting the required data**
 
 To explore the contigs in CViewer, first, we will need to obtain the output from CONCOCT and then import it into the software. Here, as an example, we have put the generated files inside the folder example_datasets/. For this tutorial, you will need the files listed below:
-```
-1. PCA_transformed_data_gt1000.csv //The N x D CSV file that contains the D PCA components for each contig 
-2. concoct_inputtable.csv //The N x S TSV file that contains the information for the coverage values for the S samples of the dataset
-3. clustering_gt1000.csv //The N x 1 CSV file that gives the labelling of which cluster each contig belongs to
+* ```PCA_transformed_data_gt1000.csv```: The N x D CSV file that contains the D PCA components for each contig 
+* ```concoct_inputtable.csv```: The N x S TSV file that contains the information for the coverage values for the S samples of the dataset
+* ```clustering_gt1000.csv```: The N x 1 CSV file that gives the labelling of which cluster each contig belongs to
 ```
 In addition, we will need the file with the taxonomic labels for the clusters of contigs which is obtained, in this example, from Kraken software.
 ```
-4. taxonomy.csv
+* ```taxonomy.csv```
 ```
 
 **Step 2: Importing the data into CViewer**
 
 To start importing the above information into CViewer, you will need to navigate youself to the "Main" tab. Next, look for the "Input" section and click to expand (or collapse) the provided menu of the section. CViewer provides a set of appropriately labelled buttons for importing the required data. Note that each button is provided for importing a specific file at a time. This is described below:
-```
+
 Click the **Open** button next to
-**PCA:** to import the file that contains the PCA components (e.g. PCA_transformed_data_gt1000.csv)
-**Coverage:** for the file that contains the information for the coverage values (e.g. concoct_inputtable.csv)
-**Clustering:** for the file that gives the labelling of which cluster each contig belongs to (e.g. clustering_gt1000.csv)
-**Taxonomy:** for the file that contains the taxonomic information for the dataset
+* ```PCA:``` to import the file that contains the PCA components (e.g. PCA_transformed_data_gt1000.csv)
+* ```Coverage:``` for the file that contains the information for the coverage values (e.g. concoct_inputtable.csv)
+* ```Clustering:``` for the file that gives the labelling of which cluster each contig belongs to (e.g. clustering_gt1000.csv)
+* ```Taxonomy:``` for the file that contains the taxonomic information for the dataset
 ```
 This is also illustrated in the following animation
 
