@@ -38,7 +38,7 @@ Once that is done, you can start using CViewer. This can be done by just double-
 
 **Step 1: Collecting the required data**
 
-To explore the contigs in CViewer, first, we will need to obtain the output from CONCOCT and then import it into the software. Here, as an example, we have put the generated files inside the folder example_datasets/. For this tutorial, you will need the files listed below:
+To explore the contigs in CViewer, first, we will need to obtain the output from CONCOCT and then import it into the software. Here, as an example, we have put the generated files inside the folder *example_datasets/*. For this tutorial, you will need the files listed below:
 * ```PCA_transformed_data_gt1000.csv:``` The N x D CSV file that contains the D PCA components for each contig 
 * ```concoct_inputtable.csv:``` The N x S TSV file that contains the information for the coverage values for the S samples of the dataset
 * ```clustering_gt1000.csv:``` The N x 1 CSV file that gives the labelling of which cluster each contig belongs to
@@ -56,7 +56,7 @@ Click the **Open** button next to
 * ```PCA:``` to import the file that contains the PCA components (e.g. PCA_transformed_data_gt1000.csv)
 * ```Coverage:``` for the file that contains the information for the coverage values (e.g. concoct_inputtable.csv)
 * ```Clustering:``` for the file that gives the labelling of which cluster each contig belongs to (e.g. clustering_gt1000.csv)
-* ```Taxonomy:``` for the file that contains the taxonomic information for the dataset
+* ```Taxonomy:``` for the file that contains the taxonomic information for the dataset (e.g. taxonomy.csv)
 
 This is also illustrated in the following animation
 
