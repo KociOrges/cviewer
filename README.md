@@ -31,11 +31,34 @@ $ unzip Output.zip
 
 Once that is done, you can start using CViewer. This can be done by just double-clicking the executable ```CViewer.jar``` file provided in the directory ```cviewer/```.
 
-## Visualisation features
 
-## Clustering, coverage and functional annotation of contigs
+## Visualisation of clustering & coverage of metagenomics contigs
 
 ```CViewer``` integrates with CONCOCT pipeline (https://github.com/BinPro/CONCOCT) for visualising the contigs. The output from CONCOCT can be loaded into the software to inspect the clustering of the contigs across multiple components of the PCA analysis. The PCA plot shows contigs as points with unique coloring to identify the species they belong to (contigs binning is done by the CONCOCT software). The size of the points in PCA space shows the coverages of the contigs and serves as  a visual cue for the species that are abundant in a given sample with a slider bar giving a means to shift between samples. Additional metadata available on the samples including the treatment groups (say case-control groups) can be uploaded to the software.
+
+**Step 1: Collecting the required data**
+To explore the contigs in CViewer, first, we will need to obtain the output from CONCOCT and then import it into the software. Here, as an example, we have put the generated files inside the folder example_datasets/. For this tutorial, you will need the files listed below:
+```
+PCA_transformed_data_gt1000.csv //The N x D CSV file that contains the D PCA components for each contig 
+concoct_inputtable.csv //The N x S TSV file that contains the information for the coverage values for the S samples of the dataset
+clustering_gt1000.csv //The N x 1 CSV file that gives the labelling of which cluster each contig belongs to
+```
+In addition, we will need the file with the taxonomic labels for the clusters of contigs which is obtained, in this example, from Kraken software.
+```
+taxonomy.csv
+```
+
+**Step 2: Importing the data into CViewer**
+To start importing the above information into CViewer, you will need to navigate youself to the "Main" tab. Next, look for the "Input" section and click to expand (or collapse) the provided menu of the section. CViewer provides a set of appropriately labelled buttons for importing the required data. Note that each button is provided for importing a specific file at a time. This is described below:
+```
+Click the ```Open``` button next to
+PCA: to import the file that contains the PCA components (e.g. PCA_transformed_data_gt1000.csv)
+Coverage: for the file that contains the information for the coverage values (e.g. concoct_inputtable.csv)
+Clustering: for the file that gives the labelling of which cluster each contig belongs to (e.g. clustering_gt1000.csv)
+Taxonomy: for the file that contains the taxonomic information for the dataset
+```
+This is also illustrated in the following animation
+
 
 One can explore the annotated genomic features for the contigs of the dataset by visualizing the CDS regions picked from GenBank file (given from PROKKA, https://github.com/tseemann/prokka), with a means to switch the labels to specific genes or those that were assigned an enzyme identifier. A legend describing summary statistics for the given contig is displayed on the bottom-left part of the panel including length, number of CDS regions, genes and enzyme identifiers. One can also search the identified protein sequences against NCBI’s **Conserved Domain Databases (CDD)**. CDD is a protein annotation resource that consists of a collection of well-annotated multiple sequence alignment models for ancient domains and full-length proteins. Once the CDDs are obtained, we can then use the scripts provided with ```CViewer``` to assign them to **Clusters of Orthologous Groups (COGs)**. Each COG consists of a group of proteins found to be orthologous across at least three lineages and likely corresponds to an ancient conserved domain. This annotation process provides an alternative for rapidly describing the functional characteristics of a community of microbes. 
 
