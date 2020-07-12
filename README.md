@@ -1,5 +1,6 @@
 #    ```CViewer```
-### A Java-based integrated analysis toolkit for whole-genome shotgun metagenomics and other meta’omics technologies
+### A Java-based statistical framework for integration of shotgun metagenomics with other omics technologies
+#### Orges Koci, Richard K. Russell, Konstantinos Gerasimidis, *Umer Zeeshan Ijaz (* Correspondence: Umer.Ijaz@glasgow.ac.uk)
 
 ```diff
 - Please note that the repository for this project is still under construction!
