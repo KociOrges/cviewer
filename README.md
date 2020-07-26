@@ -74,13 +74,13 @@ One can explore the annotated genomic features for the contigs of the dataset by
 **Step 1: Collecting the data**
 
 * ```PROKKA.gbk:``` The file that contains all the annotation tracks for the *N* contigs of the dataset, obtained from PROKKA software
-* ```PROKKA_COGsDB.tsv:``` The file that contains the information with the COGs for the *N* contigs of the dataset, obtained from the scripts provided with CViewer and by using the NBCI's CDD database
+* ```COGsDB.tsv:``` The file that contains the information with the COGs for the *N* contigs of the dataset, obtained from the scripts provided with CViewer and by using the NBCI's CDD database
 
 **Step 2: Importing the data into CViewer**
 
 In a way similar to the one described in the prvious section, click the **Open** button next to
 * ```GenBank:``` to import the file the GenBank file (e.g. PROKKA.gbk)
-* ```COGs:``` to import the file with all the identified COGs (e.g. PROKKA_COGsDB.tsv)
+* ```COGs:``` to import the file with all the identified COGs (e.g. COGsDB.tsv)
 
 **Step 2: Visualising the annotation tracks**
 
