@@ -34,11 +34,11 @@ Once that is done, you can start using CViewer. This can be done by just double-
 
 ## Visualising the metagenomics contigs
 
-```CViewer``` integrates with CONCOCT pipeline (https://github.com/BinPro/CONCOCT) for visualising the contigs. The output from CONCOCT can be loaded into the software to inspect the clustering of the contigs across multiple components of the PCA analysis. The PCA plot shows contigs as points with unique coloring to identify the species they belong to (contigs binning is done by the CONCOCT software). The size of the points in PCA space shows the coverages of the contigs and serves as  a visual cue for the species that are abundant in a given sample with a slider bar giving a means to shift between samples. Additional metadata available on the samples including the treatment groups (say case-control groups) can be uploaded to the software.
+```CViewer``` integrates with CONCOCT pipeline (https://github.com/BinPro/CONCOCT) for visualising the contigs. The output from CONCOCT can be loaded into the software to inspect the clustering of the contigs across multiple components of the PCA analysis in the context of samples coverages. To explore the contigs in CViewer, first, we will need to obtain the output from CONCOCT and then import it into the software. Here, as an example, we have put the generated files inside the folder *example_datasets/*. 
 
 **Step 1: Collecting the required data**
 
-To explore the contigs in CViewer, first, we will need to obtain the output from CONCOCT and then import it into the software. Here, as an example, we have put the generated files inside the folder *example_datasets/*. For this tutorial, you will need the files listed below:
+For this tutorial, you will need the files listed below:
 * ```PCA_transformed_data_gt1000.csv:``` The *N x D* CSV file that contains the *D* PCA components for each contig 
 * ```concoct_inputtable.csv:``` The *N x S* TSV file that contains the information for the coverage values for the *S* samples of the dataset
 * ```clustering_gt1000.csv:``` The *N x 1* CSV file that gives the labelling of which cluster each contig belongs to
@@ -67,9 +67,27 @@ Once we have imported the above data into the software we can start exploring th
 
 [![animation](https://user-images.githubusercontent.com/30604050/88486314-c36bcf80-cf74-11ea-8d75-4955cfa32a8d.png)](https://www.youtube.com/watch?v=nNBwd6isETQ&feature=youtu.be)
 
-One can explore the annotated genomic features for the contigs of the dataset by visualizing the CDS regions picked from GenBank file (given from PROKKA, https://github.com/tseemann/prokka), with a means to switch the labels to specific genes or those that were assigned an enzyme identifier. A legend describing summary statistics for the given contig is displayed on the bottom-left part of the panel including length, number of CDS regions, genes and enzyme identifiers. One can also search the identified protein sequences against NCBI’s **Conserved Domain Databases (CDD)**. CDD is a protein annotation resource that consists of a collection of well-annotated multiple sequence alignment models for ancient domains and full-length proteins. Once the CDDs are obtained, we can then use the scripts provided with ```CViewer``` to assign them to **Clusters of Orthologous Groups (COGs)**. Each COG consists of a group of proteins found to be orthologous across at least three lineages and likely corresponds to an ancient conserved domain. This annotation process provides an alternative for rapidly describing the functional characteristics of a community of microbes. 
+## Functional annotation of the metagenomics contigs
 
-The COGs identified in the CDS blocks are highlighted by right-clicking and choosing from a pop-up menu. If there is a need to explore some specific CDS regions further, then a set of them can be selected manually by the user and extracted as an output file with their sequence details (say a user wants to analyse how a particular homologous gene differs between different species through third party tools). Finally, integration with statistical utilities for protein sequences allows for the assessment of the structural characteristics of the CDS regions to highlight potential **antimicrobial resistant genes**.
+One can explore the annotated genomic features for the contigs of the dataset by visualizing the CDS regions picked from GenBank file (given from PROKKA, https://github.com/tseemann/prokka), with a means to switch the labels to specific genes or those that were assigned an enzyme identifier. One can also search the identified protein sequences against NCBI’s **Conserved Domain Databases (CDD)**. CDD is a protein annotation resource that consists of a collection of well-annotated multiple sequence alignment models for ancient domains and full-length proteins. Once the CDDs are obtained, we can then use the scripts provided with ```CViewer``` to assign them to **Clusters of Orthologous Groups (COGs)**. Each COG consists of a group of proteins found to be orthologous across at least three lineages and likely corresponds to an ancient conserved domain. This annotation process provides an alternative for rapidly describing the functional characteristics of a community of microbes. To explore this information in CViewer we first need to import the required data obtained from PROKKA and NCBI's CDD database located inside the folder *example_datasets/* and using again the "Input" section of the "Main" tab in the same way as previsously described and as shown in the following steps:
+
+**Step 1: Collecting the data**
+
+* ```PROKKA_02062014.gbk:``` The file that contains all the annotation tracks for the *N* contigs of the dataset, obtained from PROKKA software
+* ```COGsDB.tsv:``` The file that contains the information with the COGs for the *N* contigs of the dataset, obtained from the scripts provided with CViewer and by using the NBCI's CDD database
+
+**Step 2: Importing the data into CViewer**
+
+In a way similar to the one described in the prvious section, click the **Open** button next to
+* ```GenBank:``` to import the file the GenBank file (e.g. PROKKA_02062014.gbk)
+* ```COGs:``` to import the file with all the identified COGs (e.g. COGsDB.tsv)
+
+**Step 2: Visualising the annotation tracks**
+
+To display the annotation tracks, one needs to specify first the contig that he wants to inspect. This is achieved by interacting with the PCA plots that describe the clustering of contigs in a reduced space. When the user moves the cursor over the PCA plots, the position is obtained and a label is then shown for the chosen contig with the name of the cluster that it belongs to. The user can click on that contig to activate the panel where the data for the annotation tracks get displayed. When this is done, the CDS regions for the given contig are displayed in cyan colour, enzyme and COGs information is represented in yellow and red colours respectively, and the labels for putative products for the CDS regions can be also replaced with gene labels. The COGs identified in the CDS blocks are highlighted by right-clicking and choosing from a pop-up menu. If there is a need to explore some specific CDS regions further, then a set of them can be selected manually by the user and extracted as an output file with their sequence details (say a user wants to analyse how a particular homologous gene differs between different species through third party tools). Moreover, a legend describing summary statistics for the given contig is displayed on the bottom-left part of the panel including length, number of CDS regions, genes and enzyme identifiers. Finally, integration with statistical utilities for protein sequences allows for the assessment of the structural characteristics of the CDS regions to highlight potential **antimicrobial resistant genes**. These features are illustrated in the video below:
+
+
+
 
 See animation below:
 
