@@ -122,14 +122,16 @@ Most of the provided techniques require an abundance table and metadata with lab
 
 In a way similar to the one described in previous sections, click the **Open** button next to
 * ```Table:``` to import your abundance table (e.g. CICRA_average_coverages.csv)
-* ```Metadata:``` to import the file with the associated metadata (e.g. CICRA_project_metadata.tsv)
+* ```Metadata:``` to import the file with the associated metadata (e.g. CICRA_project_metadata.csv)
 
 **Step 2: Normalising the abundance data**
 
 CViewer provides a number of popular normalisation techniques for reducing systematic variation in data. In particular, abundance data can be normalised by using a relative or log-relative transformation, a log transformation based on the natural or the base 2 logarithm, or a Pareto scaling (used mostly for normalising metabolomics data). To do that, one only needs to choose the normalisation method that he wants to use for the data by selecting from the ones provided in the given drop-down list located right next to the button that was used for uploading the abundace data.
 
 ## Alpha diversity
-The tool allows alpha diversity analyses and considers a number of popular indices that can be used to interrogate the input datasets. We have considered the Shannon's (H'), Simpson’s diversity (D1) and its inverse (D2) which account for species richness and abundance. To measure how similar the distributions of species in a community are to each other, the tool provides the Pielou’s evenness. Finally, the relative proportions of the most dominant taxa for a given community dataset can also be explored. See animation below:
+After we have performed the above steps, we can start exploring our data in CViewer. The tool allows alpha diversity analyses and considers a number of popular indices that can be used to interrogate the input datasets. We have considered the Shannon's (H'), Simpson’s diversity (D1) and its inverse (D2) which account for species richness and abundance. To measure how similar the distributions of species in a community are to each other, the tool provides the Pielou’s evenness. Finally, the relative proportions of the most dominant taxa for a given community dataset can also be explored. See animation below:
+
+
 
 ![Alpha_diversity 2020-01-12 21_44_37](https://user-images.githubusercontent.com/30604050/72226084-cda02080-3584-11ea-807b-177d882e1d2d.gif)
 
