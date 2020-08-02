@@ -82,11 +82,11 @@ In a way similar to the one described in the previous section, click the **Open*
 * ```GenBank:``` to import the GenBank file (e.g. PROKKA.gbk)
 * ```COGs:``` to import the file with all the identified COGs (e.g. COGsDB.tsv)
 
-**Step 2: Visualising the annotation tracks**
+**Step 3: Visualising the annotation tracks**
 
 To display the annotation tracks, one needs to specify first the contig that he wants to inspect. This is achieved by interacting with the PCA plots that describe the clustering of contigs in a reduced space. When the user moves the cursor over the PCA plots, the position is obtained and a label is then shown for the chosen contig with the name of the cluster that it belongs to. The user can click on that contig to activate the panel where the data for the annotation tracks get displayed. When this is done, the CDS regions for the given contig are displayed in cyan colour, enzyme and COGs information is represented in yellow and red colours respectively, while the labels for putative products for the CDS regions can be also replaced with gene labels. 
 
-**Step 2: Selecting and extracting annotation data**
+**Step 4: Selecting and extracting annotation data**
 
 The COGs identified in the CDS blocks are highlighted by right-clicking and choosing from a pop-up menu. If there is a need to explore some specific CDS regions further, then a set of them can be selected manually by the user and extracted as an output file with their sequence details (say a user wants to analyse how a particular homologous gene differs between different species through third party tools). Moreover, a legend describing summary statistics for the given contig is displayed on the bottom-left part of the panel including length, number of CDS regions, genes and enzyme identifiers. Finally, integration with statistical utilities for protein sequences allows for the assessment of the structural characteristics of the CDS regions to highlight potential **antimicrobial resistant genes**. These features are illustrated in the video below:
 
