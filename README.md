@@ -133,7 +133,7 @@ After we have performed the above steps, we can start exploring our data in CVie
 
 * ```Index:``` a drop-down menu with the available a-diversity methods (e.g. Shannon, Simpson etc.)
 * ```Group by:``` a drop-down menu with the columns containing labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
-* ```Taxa number:``` field activated when one wants to explore the *Relative proportions* of the most abundant clusters/species in a groups of samples and used for showing the number of the *X* top clusters/species in each group that one wishes to inspect.
+* ```Taxa number:``` field activated when one wants to explore the ***Relative proportions*** of the most abundant clusters/species in a groups of samples and used for showing the number of the ***X*** top clusters/species in each group that one wishes to inspect.
 * ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) should the results be displayed.
 
 See the animation below for more details:
@@ -152,10 +152,20 @@ We have considered the Pearson’s product-moment coefficient to measure the deg
 
 
 ## Beta diversity
-### Principal Component Analysis
-Principal component analysis is one of the most popular among the existing dimensionality reduction techniques. The goal here is to find the best summary of the data using a small number of principal components (PCs). We have considered the Nonlinear Iterative Partial Least Squares (NIPALS) for computing PCA, a popular approach in multivariate data analysis that performs well with large datasets.
 
-### Multidimensional Scaling
+### 1. Principal Component Analysis
+Principal component analysis is one of the most popular among the existing dimensionality reduction techniques. The goal here is to find the best summary of the data using a small number of principal components (PCs). We have considered the Nonlinear Iterative Partial Least Squares (NIPALS) for computing PCA, a popular approach in multivariate data analysis that performs well with large datasets. One can explore up to 8 components of the PCA analysis using CViewer, where if one is interested just in the firt few dimensions, the number of components to be calculated can then be specified manually to improve also time efficiency. The different components can be inspected by using the provided slider. In the menu you will find the following options:
+
+* A ```check-box``` with the label **All dimensions (max 8)**: default option if there is no need for specifying the returned number of PCA components
+* ```Num:``` field used to specify, if desired, the number of PCA components to be calculated
+* ```Group by:``` a drop-down menu with the columns containing labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
+* ```Components:``` slider bar giving a means to shift between PCA components
+* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) should the results be displayed.
+
+The video below provides an illustration of PCA analysis in CViewer:
+
+
+### 2. Multidimensional Scaling
 Similar to PCA, Multidimensional scaling (MDS), also known as Principal Coordinate Analysis (PCoA), is another dimensionality reduction technique that attempts to represent the (dis)similarity between a set of objects in a reduced space, based on their pair-wise dissimilarities given in the form of a distance matrix. The distance matrices can be computed in ```CViewer``` by choosing from some of the most common distance measures, such as Bray-Curtis, Jaccard and Euclidean distance. For both PCA and MDS, the percentage of variance explained in each dimension is given in the resulting plot.
 
 ### Fuzzy Set Ordination
