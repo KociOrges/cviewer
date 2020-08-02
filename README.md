@@ -137,7 +137,7 @@ After we have performed the above steps, we can start exploring our data in CVie
 * ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) should the results be displayed.
 
 See the animation below for more details:
-[![animation](https://user-images.githubusercontent.com/30604050/89131397-66d45b80-d504-11ea-984b-101362d1cfc2.png)](https://www.youtube.com/watch?v=7x3n5cYWKXM)
+[![animation](https://user-images.githubusercontent.com/30604050/89131606-fcbcb600-d505-11ea-89e5-dff538ceb576.png)](https://www.youtube.com/watch?v=qj6zGOsl_24)
 
 ## Differential abundance
 Differential abundance analysis can be valuable when investigating for features (e.g. species/metabolic pathways) that discriminate between multiple treatment groups. ```CViewer``` implements the Kruskal-Wallis H statistic for differential analysis and offers a Benjamini-Hochberg correction for multiple comparisons. In addition, pairwise significances between the groups can be explored with the Dunn’s post hoc procedure. The hypotheses to be tested can be uploaded in the software in the form of a .csv file containing hypotheses as headers along with additional metadata on the samples describing the treatment groups. One can then easily navigate through the list of available hypotheses and choose the one to be tested with the Kruskal-Wallis statistic. Finally, significant features are visualized in the form of box plots with appropriate colouring to indicate the treatment groups along with P-values to report significance.
@@ -162,7 +162,7 @@ Principal component analysis is one of the most popular among the existing dimen
 In this example, we will use the same steps that were described in the previous section for Alpha diversity analysis for uploading the data and the same dataset. In this case, however, we will first normalise our data before generating the PCA plot. To do that, one can use the ```drop-down``` menu provided in the tool and described in section **Step 2: Normalising the abundance data**.
 
 The video below provides an illustration of PCA analysis in CViewer:
-[![animation](https://user-images.githubusercontent.com/30604050/89131402-6b990f80-d504-11ea-946a-7b6fe5c311aa.png)](https://www.youtube.com/watch?v=gznFDEfKz5M)
+[![animation](https://user-images.githubusercontent.com/30604050/89131611-01816a00-d506-11ea-88d7-5c807744a1d1.png)](https://www.youtube.com/watch?v=gznFDEfKz5M)
 
 ### 2. Multidimensional Scaling
 Similar to PCA, Multidimensional scaling (MDS), also known as Principal Coordinate Analysis (PCoA), is another dimensionality reduction technique that attempts to represent the (dis)similarity between a set of objects in a reduced space, based on their pair-wise dissimilarities given in the form of a distance matrix. The distance matrices can be computed in ```CViewer``` by choosing from some of the most common distance measures, such as Bray-Curtis, Jaccard and Euclidean distance. The percentage of variance explained in each dimension is given in the resulting plot. The following options are provided for analysis using MDS:
@@ -172,7 +172,7 @@ Similar to PCA, Multidimensional scaling (MDS), also known as Principal Coordina
 * ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) should the results be displayed.
 
 Following from the previous demonstration, in this example, we will assume that you have already imported the required data, i.e. abundance table and metadata, into the software. Then, the video belows shows how MDS is performed in CViewer:
-[![animation](https://user-images.githubusercontent.com/30604050/89131405-6d62d300-d504-11ea-9caf-b6f56351259f.png)](https://www.youtube.com/watch?v=qj6zGOsl_24)
+[![animation](https://user-images.githubusercontent.com/30604050/89131612-02b29700-d506-11ea-93ad-e30fd18fbd9f.png)](https://www.youtube.com/watch?v=qj6zGOsl_24)
 
 ### Fuzzy Set Ordination
 Fuzzy set ordination is used to test effects of pertubation in environmental avariables to community structure. For each of the specified variables, a fuzzy set ordination is calculated and the correlation between the original variable and the fuzzy set is reported. The significance of a particular variable is assessed by comparing a specified threshold p-value and the probability of obtaining a correlation between the data and fuzzy set.
@@ -187,7 +187,7 @@ In fuzzy set ordination samples are assigned gradual membership values (fuzzy) r
 * ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) should the results be displayed.
 
 In this example, we will assume again that you have already imported the required data, i.e. abundance table and metadata, into the software. Let's say that we are then interested in exploring if e.g. there is an association between the community composition of the gut microbiome of Crohn's disease patients with calprotectin levels or with the levels of SCFAs and how this differs between patients who achieved or not clinical remission at the end of EEN treatment (point D). Then, the video belows shows how FSO is performed for inspecting this in CViewer:
-[![animation](https://user-images.githubusercontent.com/30604050/89131406-6f2c9680-d504-11ea-9451-666cedcfd4d2.png)](https://www.youtube.com/watch?v=_028HSzxUdw)
+[![animation](https://user-images.githubusercontent.com/30604050/89131615-03e3c400-d506-11ea-8d08-b388771c1c09.png)](https://www.youtube.com/watch?v=_028HSzxUdw)
 
 ### Permutational Multivariate Analysis of Variance
 Given a community dataset and a set of predictor physico-chemical variables, PERMANOVA can be used to provide information about the percentage of variation (R2) explained by the given predictors and the significance associated with it (P-value). The results of the PERMANOVA analysis are exported into a summary file containing sources of variation, degrees of freedom, sequential sums of squares, mean squares, K statistics, partial R-squared and P-values, based on N permutations. In addition, the percentage (%) of variation explained (R2) by different predictor variables with annotation for significance can be visualized in the software in the form of a Bar Plot or a Pie chart.
