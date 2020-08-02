@@ -78,7 +78,7 @@ One can explore the annotated genomic features for the contigs of the dataset by
 
 **Step 2: Importing the data into CViewer**
 
-In a way similar to the one described in the prvious section, click the **Open** button next to
+In a way similar to the one described in the previous section, click the **Open** button next to
 * ```GenBank:``` to import the file the GenBank file (e.g. PROKKA.gbk)
 * ```COGs:``` to import the file with all the identified COGs (e.g. COGsDB.tsv)
 
