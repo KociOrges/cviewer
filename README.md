@@ -191,7 +191,7 @@ In fuzzy set ordination samples are assigned gradual membership values (fuzzy) r
 * ```Permutations:``` the number of permutations to be used for deriving the ***p-values*** (typically 1000)
 * ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) should the results be displayed.
 
-In this example, we will assume again that you have already imported the required data, i.e. abundance table and metadata, into the software. Let's say that we are then interested in exploring if e.g. the community composition of Crohn's disease patients is related to their Calprotectin levels and how this differs between patients whoe achieved or not clinical remission at the end of EEN treatment (point D). Then, the video belows shows how FSO is performed for inspecting this in CViewer:
+In this example, we will assume again that you have already imported the required data, i.e. abundance table and metadata, into the software. Let's say that we are then interested in exploring if e.g. there is an association between the community composition of the gut microbiome of Crohn's disease patients with calprotectin levels or with the levels of SCFAs and how this differs between patients who achieved or not clinical remission at the end of EEN treatment (point D). Then, the video belows shows how FSO is performed for inspecting this in CViewer:
 
 ===================
 
