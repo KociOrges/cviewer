@@ -162,6 +162,8 @@ Principal component analysis is one of the most popular among the existing dimen
 * ```Components:``` slider bar giving a means to shift between PCA components
 * ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) should the results be displayed.
 
+Before generating the PCA plot, you will probably also need to normalise your data. To do that, you can use the ```drop-down``` menu provided in the tool and described in section **Step 2: Normalising the abundance data**.
+
 The video below provides an illustration of PCA analysis in CViewer:
 
 
