@@ -118,7 +118,7 @@ CViewer, in addition to providing the methods for the visualisation and explorat
 
 **Step 1: Importing the data into the software**
 
-Most of the provided techniques require an abundance table and metadata with labels for the treatment groups in order to run. So, first, we need to provide this information into the software. To do this, you need to navigate yourself to the ```Methods``` tab and then to the ```Input Data``` section of that tab. For demonstration purposes, in this tutorial, we have included an abundance table describing the average coverages across 976 clusters (obtained through CONCOCT software) and 144 samples collected from Crohn's disease patients undergoing dietary treatment with Exclusive Enteral Nutrition, Healthy Crohn's disease relatives and Healthy individuals. To import these data into the software, please do as follows:
+Most of the provided techniques require an abundance table and a metadata file containing the labels for the treatment groups in order to run. Once you have uploaded the required data, you should already be able to use most of the methods to explore them and there is no need for uploading the data again when you want to use a different statistical method. So, first, let's provide the required information to the software. To do this, you will need to navigate yourself to the ```Methods``` tab and then to the ```Input Data``` section of that tab. For demonstration purposes, in this tutorial, we have included an abundance table describing the average coverages across 976 clusters (obtained through CONCOCT software) and 144 samples collected from Crohn's disease patients undergoing dietary treatment with Exclusive Enteral Nutrition, Healthy Crohn's disease relatives and Healthy individuals. To import these data into the software, please do as follows:
 
 In a way similar to the one described in previous sections, click the **Open** button next to
 * ```Table:``` to import your abundance table (e.g. CICRA_average_coverages.csv)
@@ -154,7 +154,7 @@ We have considered the Pearson’s product-moment coefficient to measure the deg
 ## Beta diversity
 
 ### 1. Principal Component Analysis
-Principal component analysis is one of the most popular among the existing dimensionality reduction techniques. The goal here is to find the best summary of the data using a small number of principal components (PCs). We have considered the Nonlinear Iterative Partial Least Squares (NIPALS) for computing PCA, a popular approach in multivariate data analysis that performs well with large datasets. One can explore up to 8 components of the PCA analysis using CViewer, where if one is interested just in the firt few dimensions, the number of components to be calculated can then be specified manually to improve also time efficiency. The different components can be inspected by using the provided slider. In the menu you will find the following options:
+Principal component analysis is one of the most popular among the existing dimensionality reduction techniques. The goal here is to find the best summary of the data using a small number of principal components (PCs). We have considered the Nonlinear Iterative Partial Least Squares (NIPALS) for computing PCA, a popular approach in multivariate data analysis that performs well with large datasets. One can explore up to 8 components of the PCA analysis using CViewer, where if one is interested just in the firt few dimensions, the number of components to be calculated can then be specified manually to improve also time efficiency. The different components can be inspected by using the provided slider and the percentage of variance explained in each dimension is given in the resulting plot. In the menu you will find the following options:
 
 * A ```check-box``` with the label ***All dimensions (max 8)***: default option used when the user has not specified the number of PCA components to be returned
 * ```Num:``` field used to specify, if desired, the number of PCA components to be calculated
@@ -162,18 +162,38 @@ Principal component analysis is one of the most popular among the existing dimen
 * ```Components:``` slider bar giving a means to shift between PCA components
 * ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) should the results be displayed.
 
-Before generating the PCA plot, you will probably also need to normalise your data. To do that, you can use the ```drop-down``` menu provided in the tool and described in section **Step 2: Normalising the abundance data**.
+In this example, we will use the same steps that were described in the previous section for Alpha diversity analysis for uploading the data and the same dataset. In this case, however, we will first normalise our data before generating the PCA plot. To do that, one can use the ```drop-down``` menu provided in the tool and described in section **Step 2: Normalising the abundance data**.
 
 The video below provides an illustration of PCA analysis in CViewer:
 
+===================
 
 ### 2. Multidimensional Scaling
-Similar to PCA, Multidimensional scaling (MDS), also known as Principal Coordinate Analysis (PCoA), is another dimensionality reduction technique that attempts to represent the (dis)similarity between a set of objects in a reduced space, based on their pair-wise dissimilarities given in the form of a distance matrix. The distance matrices can be computed in ```CViewer``` by choosing from some of the most common distance measures, such as Bray-Curtis, Jaccard and Euclidean distance. For both PCA and MDS, the percentage of variance explained in each dimension is given in the resulting plot.
+Similar to PCA, Multidimensional scaling (MDS), also known as Principal Coordinate Analysis (PCoA), is another dimensionality reduction technique that attempts to represent the (dis)similarity between a set of objects in a reduced space, based on their pair-wise dissimilarities given in the form of a distance matrix. The distance matrices can be computed in ```CViewer``` by choosing from some of the most common distance measures, such as Bray-Curtis, Jaccard and Euclidean distance. The percentage of variance explained in each dimension is given in the resulting plot. The following options are provided for analysis using MDS:
+
+* ```Distance:``` a drop-down menu with the available distances methods (Euclidean, Bray-Curtis and Jaccard)
+* ```Group by:``` a drop-down menu with the columns containing labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
+* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) should the results be displayed.
+
+Following from the previous demonstration, in this example, we will assume that you have already imported the required data, i.e. abundance table and metadata, into the software. Then, the video belows shows how MDS is performed in CViewer:
+
+===================
 
 ### Fuzzy Set Ordination
 Fuzzy set ordination is used to test effects of pertubation in environmental avariables to community structure. For each of the specified variables, a fuzzy set ordination is calculated and the correlation between the original variable and the fuzzy set is reported. The significance of a particular variable is assessed by comparing a specified threshold p-value and the probability of obtaining a correlation between the data and fuzzy set.
 
-In fuzzy set ordination samples are assigned gradual membership values (fuzzy) ranging from 0 to 1. To achieve this, FSO does not use the raw community data, but rather a similarity (or distance) matrix, which is calculated prior to the statistic. The software supports three different similarity indices to calculate the similarity matrix, namely, the Baroni-Urbani & Buser, Horn and Yule indices. The results are visualised by producing a plot of fuzzy set against original values which is annotated with a correlation between them and a significance label.
+In fuzzy set ordination samples are assigned gradual membership values (fuzzy) ranging from 0 to 1. To achieve this, FSO does not use the raw community data, but rather a similarity (or distance) matrix, which is calculated prior to the statistic. The software supports three different similarity indices to calculate the similarity matrix, namely, the Baroni-Urbani & Buser, Horn and Yule indices. The results are visualised by producing a plot of fuzzy set against original values which is annotated with a correlation between them and a significance label. In the given menu, you will find the following options:
+
+* ```Experimental variables:``` a ```CSV``` table describing the available experimental/environmental variables (Euclidean, Bray-Curtis and Jaccard) such as pH, Temperature, Calprotectin levels etc.
+* ```Similarity index:``` a drop-down menu with the available similarity indices (Baroni-Urbani & Buser, Horn and Yule)
+* ```Variable:``` field used to specify the environmetal variable of interest
+* ```Group by:``` a drop-down menu with the columns containing labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
+* ```Permutations:``` the number of permutations to be used for deriving the ***p-values*** (typically 1000)
+* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) should the results be displayed.
+
+In this example, we will assume again that you have already imported the required data, i.e. abundance table and metadata, into the software. Let's say that we are then interested in exploring if e.g. the community composition of Crohn's disease patients is related to their Calprotectin levels and how this differs between patients whoe achieved or not clinical remission at the end of EEN treatment (point D). Then, the video belows shows how FSO is performed for inspecting this in CViewer:
+
+===================
 
 ### Permutational Multivariate Analysis of Variance
 Given a community dataset and a set of predictor physico-chemical variables, PERMANOVA can be used to provide information about the percentage of variation (R2) explained by the given predictors and the significance associated with it (P-value). The results of the PERMANOVA analysis are exported into a summary file containing sources of variation, degrees of freedom, sequential sums of squares, mean squares, K statistics, partial R-squared and P-values, based on N permutations. In addition, the percentage (%) of variation explained (R2) by different predictor variables with annotation for significance can be visualized in the software in the form of a Bar Plot or a Pie chart.
