@@ -100,7 +100,7 @@ PROKKA software also assigns enzyme identifiers to the protein coding regions. T
 
 Before we start visualising the KEGG maps, we first need to extract any KO groups from the enzymes identified in the dataset. The matched KOs are first converted into presence/absences table for the contigs and combined next with the coverage profiles of that contigs to create microbial pathway abundances across the samples of the metagenomic data. This process is automated in CViewer and we only thing we have to do to extract the required data is to push the Apply button right next to the label ```Extract KEGG Ortholog groups```. The software will then generate a ```CSV``` file describing all the KOs that were obtained for all the contigs across the samples of the dataset and will place this file in the *Output* folder.
 
-**Step 2: Visualising the KEEG maps**
+**Step 2: Visualising the KEGG maps**
 
 Once we have completed the above step, the complete collection of molecular pathways for metabolism from KEGG database can then be visualised and annotated in the software. This includes 11 key metabolic pathways with each of them describing multiple metabolic processes which can be chosen from a ```drop-down``` list and visualised by pressing the ```Apply``` button located right next to the list. In each case, the maps are generated on a sample by sample basis i.e., one can visualise a map and inspect the KOs that are upregulated in a sample of choice. To select a specific sample to inspect, one can use the same slider used for visualising the coverage profiles of the contigs through PCA plots that is provided in the *Principal Component Analysis* section. These steps are also demonstrated in the animation below:
 
