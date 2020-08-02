@@ -129,7 +129,14 @@ In a way similar to the one described in previous sections, click the **Open** b
 CViewer provides a number of popular normalisation techniques for reducing systematic variation in data. In particular, abundance data can be normalised by using a relative or log-relative transformation, a log transformation based on the natural or the base 2 logarithm, or a Pareto scaling (used mostly for normalising metabolomics data). To do that, one only needs to choose the normalisation method that he wants to use for the data by selecting from the ones provided in the given drop-down list located right next to the button that was used for uploading the abundace data.
 
 ## Alpha diversity
-After we have performed the above steps, we can start exploring our data in CViewer. The tool allows alpha diversity analyses and considers a number of popular indices that can be used to interrogate the input datasets. We have considered the Shannon's (H'), Simpson’s diversity (D1) and its inverse (D2) which account for species richness and abundance. To measure how similar the distributions of species in a community are to each other, the tool provides the Pielou’s evenness. Finally, the relative proportions of the most dominant taxa for a given community dataset can also be explored. See animation below:
+After we have performed the above steps, we can start exploring our data in CViewer. The tool allows alpha diversity analyses and considers a number of popular indices that can be used to interrogate the input datasets. We have considered the Shannon's (H'), Simpson’s diversity (D1) and its inverse (D2) which account for species richness and abundance. To measure how similar the distributions of species in a community are to each other, the tool provides the Pielou’s evenness. Finally, the relative proportions of the most dominant taxa for a given community dataset can also be explored. In each case, the generated plots can be **customised (e.g. change X-Y axis font size, range etc.) by right-clicking** on the plot and can be extracted into a ```PNG``` file for publication or further research. In the given menu you will find the options described below:
+
+* ```Index:``` a drop-down menu with the available a-diversity methods (e.g. Shannon, Simpson etc.)
+* ```Group by:``` a drop-down menu with the columns containing labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
+* ```Taxa number:``` field activated when one wants to explore the *Relative proportions* of the most abundant clusters/species in a groups of samples and used for showing the number of the *X* top clusters/species in each group that one wishes to inspect.
+* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) should the results be displayed.
+
+See the animation below for more details:
 
 
 
