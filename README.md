@@ -156,7 +156,7 @@ We have considered the Pearson’s product-moment coefficient to measure the deg
 ### 1. Principal Component Analysis
 Principal component analysis is one of the most popular among the existing dimensionality reduction techniques. The goal here is to find the best summary of the data using a small number of principal components (PCs). We have considered the Nonlinear Iterative Partial Least Squares (NIPALS) for computing PCA, a popular approach in multivariate data analysis that performs well with large datasets. One can explore up to 8 components of the PCA analysis using CViewer, where if one is interested just in the firt few dimensions, the number of components to be calculated can then be specified manually to improve also time efficiency. The different components can be inspected by using the provided slider. In the menu you will find the following options:
 
-* A ```check-box``` with the label **All dimensions (max 8)**: default option if there is no need for specifying the returned number of PCA components
+* A ```check-box``` with the label ***All dimensions (max 8)***: default option used when the user has not specified the number of PCA components to be returned
 * ```Num:``` field used to specify, if desired, the number of PCA components to be calculated
 * ```Group by:``` a drop-down menu with the columns containing labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
 * ```Components:``` slider bar giving a means to shift between PCA components
