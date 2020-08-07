@@ -134,18 +134,10 @@ After we have performed the above steps, we can start exploring our data in CVie
 * ```Index:``` a drop-down menu with the available a-diversity methods (e.g. Shannon, Simpson etc.)
 * ```Group by:``` a drop-down menu with the columns containing labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
 * ```Taxa number:``` field activated when one wants to explore the ***Relative proportions*** of the most abundant clusters/species in a groups of samples and used for showing the number of the ***X*** top clusters/species in each group that one wishes to inspect.
-* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) should the results be displayed.
+* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) the results should be displayed
 
 See the animation below for more details:
 [![animation](https://user-images.githubusercontent.com/30604050/89131606-fcbcb600-d505-11ea-89e5-dff538ceb576.png)](https://www.youtube.com/watch?v=qj6zGOsl_24)
-
-## Differential abundance
-Differential abundance analysis can be valuable when investigating for features (e.g. species/metabolic pathways) that discriminate between multiple treatment groups. ```CViewer``` implements the Kruskal-Wallis H statistic for differential analysis and offers a Benjamini-Hochberg correction for multiple comparisons. In addition, pairwise significances between the groups can be explored with the Dunn’s post hoc procedure. The hypotheses to be tested can be uploaded in the software in the form of a .csv file containing hypotheses as headers along with additional metadata on the samples describing the treatment groups. One can then easily navigate through the list of available hypotheses and choose the one to be tested with the Kruskal-Wallis statistic. Finally, significant features are visualized in the form of box plots with appropriate colouring to indicate the treatment groups along with P-values to report significance.
-
-## Correlation
-We have considered the Pearson’s product-moment coefficient to measure the degree of the association between two continuous variables, the Kendall’s tau coefficient to compare two quantities measured on at least an ordinal scale and the Spearman’s rank-order correlation as the nonparametric alternative of Pearson’s product-moment coefficient. Prior to analysis, the input tables can be normalized, filtered and/or sorted according to threshold values provided from the user. For a selected correlation coefficient, a full report can be displayed containing the correlation value (R) and the statistical significance (P-value and adjusted P-value) obtained for each pairwise comparison between the elements of the two data matrices.
-
-![Differential_abundance Correlation 2020-01-19 21_09_30](https://user-images.githubusercontent.com/30604050/72688522-0188c200-3b00-11ea-9624-7c862fe4e743.gif)
 
 
 ## Beta diversity
@@ -157,7 +149,7 @@ Principal component analysis is one of the most popular among the existing dimen
 * ```Num:``` field used to specify, if desired, the number of PCA components to be calculated
 * ```Group by:``` a drop-down menu with the columns containing labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
 * ```Components:``` slider bar giving a means to shift between PCA components
-* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) should the results be displayed.
+* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) the results should be displayed
 
 In this example, we will use the same steps that were described in the previous section for Alpha diversity analysis for uploading the data and the same dataset. In this case, however, we will first normalise our data before generating the PCA plot. To do that, one can use the ```drop-down``` menu provided in the tool and described in section **Step 2: Normalising the abundance data**.
 
@@ -169,7 +161,7 @@ Similar to PCA, Multidimensional scaling (MDS), also known as Principal Coordina
 
 * ```Distance:``` a drop-down menu with the available distances methods (Euclidean, Bray-Curtis and Jaccard)
 * ```Group by:``` a drop-down menu with the columns containing labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
-* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) should the results be displayed.
+* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) the results should be displayed
 
 Following from the previous demonstration, in this example, we will assume that you have already imported the required data, i.e. abundance table and metadata, into the software. Then, the video belows shows how MDS is performed in CViewer:
 [![animation](https://user-images.githubusercontent.com/30604050/89131612-02b29700-d506-11ea-93ad-e30fd18fbd9f.png)](https://www.youtube.com/watch?v=qj6zGOsl_24)
@@ -184,22 +176,62 @@ In fuzzy set ordination samples are assigned gradual membership values (fuzzy) r
 * ```Variable:``` field used to specify the environmetal variable of interest
 * ```Group by:``` a drop-down menu with the columns containing labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
 * ```Permutations:``` the number of permutations to be used for deriving the ***p-values*** (typically 1000)
-* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) should the results be displayed.
+* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) the results should be displayed
 
 In this example, we will assume again that you have already imported the required data, i.e. abundance table and metadata, into the software. Let's say that we are then interested in exploring if e.g. there is an association between the community composition of the gut microbiome of Crohn's disease patients with calprotectin levels or with the levels of SCFAs and how this differs between patients who achieved or not clinical remission at the end of EEN treatment (point D). Then, the video belows shows how FSO is performed for inspecting this in CViewer:
 [![animation](https://user-images.githubusercontent.com/30604050/89131615-03e3c400-d506-11ea-8d08-b388771c1c09.png)](https://www.youtube.com/watch?v=_028HSzxUdw)
 
 ### Permutational Multivariate Analysis of Variance
-Given a community dataset and a set of predictor physico-chemical variables, PERMANOVA can be used to provide information about the percentage of variation (R2) explained by the given predictors and the significance associated with it (P-value). The results of the PERMANOVA analysis are exported into a summary file containing sources of variation, degrees of freedom, sequential sums of squares, mean squares, K statistics, partial R-squared and P-values, based on N permutations. In addition, the percentage (%) of variation explained (R2) by different predictor variables with annotation for significance can be visualised in the software in the form of a Bar Plot or a Pie chart. CViewer provides the following options for using PERMANOVA:
+Given a community dataset and a set of predictor physico-chemical variables, PERMANOVA can be used to provide information about the percentage of variation (R2) explained by the given predictors and the significance associated with it (P-Value). The results of the PERMANOVA analysis are exported into a summary file in the *Output/* folder containing sources of variation, degrees of freedom, sequential sums of squares, mean squares, K statistics, partial R-squared and P-Values, based on N permutations. In addition, the percentage (%) of variation explained (R2) by different predictor variables with annotation for significance can be visualised in the software in the form of a Bar Plot or a Pie chart. CViewer provides the following options for using PERMANOVA:
 
 * A ```text-field```**```(Y~)```** used to provide the formula with the independent variables to be tested (e.g. Y ~ Group + pH + Calprotectin)
-* ```Distance:``` a drop-down menu with the available distances methods (Euclidean, Bray-Curtis and Jaccard) to calculate pairwise distances 
-* ```Style:``` results can be visualised in the form of a Bar Plot or a Pie chart
-* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) should the results be displayed.
+* ```Distance:``` a drop-down menu with the available distances methods (Euclidean, Bray-Curtis and Jaccard) that can be used to calculate pairwise distances 
+* ```Style:``` results can be visualised in the form of a *Bar Plot* or a *Pie chart*
+* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) the results should be displayed
+
+This is demonstrated in the video below. We will assume again that you have already imported the required data, i.e. the abundance table and the metadata, into the software.:
+[![animation](https://user-images.githubusercontent.com/30604050/89682931-75998480-d8ef-11ea-83c8-9548bcccf567.png)](youtube.com/watch?v=iga4uoq3U-w)
 
 
+## Differential abundance
+Differential abundance analysis can be valuable when investigating for features (e.g. species/metabolic pathways) that discriminate between multiple treatment groups. ```CViewer``` implements the Kruskal-Wallis H statistic for differential analysis and offers a Benjamini-Hochberg correction for multiple comparisons. In addition, pairwise significances between the groups can be explored with the Dunn’s post hoc procedure. The hypotheses to be tested can be uploaded in the software in the form of a .csv file containing hypotheses as headers along with additional metadata on the samples describing the treatment groups. One can then easily navigate through the list of available hypotheses and choose the one to be tested with the Kruskal-Wallis statistic. Finally, significant features are visualised in the form of box plots with appropriate colouring to indicate the treatment groups along with P-Values to report significance. The test provides the following options:
 
-![Beta_diversity 2020-01-12 21_13_52](https://user-images.githubusercontent.com/30604050/72225708-7b5d0080-3580-11ea-9dd0-b2c5809ed7d2.gif)
+* ```P-Value:``` the P-Value cut-off of the test
+* ```Objects:``` how many objects or groups we would like to viusalise in the plot from the total number of the returned features that were found significant 
+* ```Post-hoc test:``` whether a post-hoc test should be performed with the Kruskal-Wallis test (based on Dunn’s post hoc procedure)
+* ```Adjust P-Values:``` whether P-Values should be adjusted to account for multiple comparisons (based on Benjamini-Hochberg's method)
+* ```Group by:``` a drop-down menu with the columns of the metadata file describing the labels for the dataset samples (e.g. CICRA_project_metadata.csv)
+* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) the results should be displayed
+
+The example below illustrates how the above options are used in CViewer in order to perform differential abundance analysis. We will assume that you have already imported the required data, i.e. the abundance table and the metadata. Now, let's say that we are interested in exploring, e.g., whether any species (CONCOCT clusters) in the gut microbiome of CD patients change significantly in abundance during the EEN treamtent, and how this differs from the healthy baseline:
+
+[![animation](https://user-images.githubusercontent.com/30604050/89682919-6fa3a380-d8ef-11ea-9d62-f64af5ff7174.png)](https://www.youtube.com/watch?v=dTCAzbKhezg)
+
+
+## Correlation
+We have considered the Pearson’s product-moment coefficient to measure the degree of the association between two continuous variables, the Kendall’s tau coefficient to compare two quantities measured on at least an ordinal scale and the Spearman’s rank-order correlation as the nonparametric alternative of Pearson’s product-moment coefficient. Correlation analysis can be performed between two different data matrices (X and Y) that have the same set of samples in common. For example, after using CViewer to generate the abundance table with the average coverages of clusters across the samples of the input WGS dataset, one may want to explore how these clusters are associated with a number of environmental/experimental variables (e.g. pH, bacterial metabolites) that were measured on the same dataset samples and how these associations differentiate between the given treatments groups. 
+
+
+Prior to analysis, the input tables can be normalised, filtered and/or sorted according to threshold values provided from the user. For a selected correlation coefficient, a full report can be displayed containing the correlation value (R) and the statistical significance (P-value and adjusted P-value) obtained for each pairwise comparison between the elements of the two data matrices. To do this, the software provides a number of options that can be used to configure the analysis and which are described below:
+
+**Step 1: Input Data: Importing the data into the software**
+* ```Table X:``` the X table with *N* number of rows, where rows describe samples (e.g. CICRA_average_coverages.csv)
+* ```Table Y:``` the Y table also with *N* number of rows, where rows describe samples (e.g. CICRA_bacterial_metabolites.csv)
+* ```Normalise:``` normalisation can be performed individually for each matrix
+* ```Metadata:``` the file with the associated metadata (e.g. CICRA_project_metadata.csv)
+
+**Step 2: Options: Configuring the analysis**
+* ```Method:``` the correlation coefficient of the test (Pearson’s product-moment, Kendall’s tau or Spearman’s rank-order correlation can be used)
+* ```Adjust by:``` *P-Values* are adjusted using the *Benjamini-Hochbers's* procedure for multiple testing based on the ***X*** or ***Y*** table
+* ```Filter X (>):``` keep the rows of ***table X*** for which the total sum is greater than that of the "filter X" value 
+* ```Filter Y (>):``` keep the rows of ***table Y*** for which the total sum is greater than that of the "filter Y" value 
+* ```Top (applied to X or Y table whether right next to Filter X or Filter Y):``` Return the first "Top" features from table ***X*** or ***Y*** depending on selection
+* ```Sort (applied to X or Y table whether right next to Filter X or Filter Y):``` Sort the returned features of table ***X*** or ***Y*** (depending on selection) based on abundance in decreasing order
+* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) the results should be displayed
+
+The video below shows how these options are used to perform Correlation analysis in CViewer. Let's assume that we interested in exploring for any underlying association between the metagenomics clusters or species of the WGS dataset and some additional variables that were measured on the same dataset samples:
+
+[![animation](https://user-images.githubusercontent.com/30604050/89682930-73cfc100-d8ef-11ea-8083-3e5f202985fa.png)](https://www.youtube.com/watch?v=ohsiSI7r9lc)
 
 
 ## Integrated ‘omics analysis
