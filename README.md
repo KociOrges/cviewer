@@ -190,7 +190,7 @@ Given a community dataset and a set of predictor physico-chemical variables, PER
 * ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) the results should be displayed
 
 This is demonstrated in the video below. We will assume again that you have already imported the required data, i.e. the abundance table and the metadata, into the software.:
-[![animation](https://user-images.githubusercontent.com/30604050/89682931-75998480-d8ef-11ea-83c8-9548bcccf567.png)](youtube.com/watch?v=iga4uoq3U-w)
+[![animation](https://user-images.githubusercontent.com/30604050/89682919-6fa3a380-d8ef-11ea-9d62-f64af5ff7174.png)](https://www.youtube.com/watch?v=iga4uoq3U-w)
 
 
 ## Differential abundance
@@ -205,7 +205,7 @@ Differential abundance analysis can be valuable when investigating for features 
 
 The example below illustrates how the above options are used in CViewer in order to perform differential abundance analysis. We will assume that you have already imported the required data, i.e. the abundance table and the metadata. Now, let's say that we are interested in exploring, e.g., whether any species (CONCOCT clusters) in the gut microbiome of CD patients change significantly in abundance during the EEN treamtent, and how this differs from the healthy baseline:
 
-[![animation](https://user-images.githubusercontent.com/30604050/89682919-6fa3a380-d8ef-11ea-9d62-f64af5ff7174.png)](https://www.youtube.com/watch?v=dTCAzbKhezg)
+[![animation](https://user-images.githubusercontent.com/30604050/89682931-75998480-d8ef-11ea-83c8-9548bcccf567.png)](https://www.youtube.com/watch?v=dTCAzbKhezg)
 
 
 ## Correlation
