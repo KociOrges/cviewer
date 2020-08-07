@@ -114,7 +114,7 @@ Community phylogenetic a-diversity analysis is possible with ```CViewer``` softw
 
 ## Data analysis tools & techniques
 
-CViewer, in addition to providing the methods for the visualisation and exploration of the features of contigs in the context of sample coverages, supports a comprehensive set of multivariate statistical algorithms using the theoretical underpinning of numerical ecology to allow exploratory as well as hypothesis driven analyses. The provided tools have been simplified and implemented in the form of intuitive workflows tailored to the need of non-expert users. For convenience, all these techniques have been categorised and included in the ```Methods``` tab of the software.
+CViewer, in addition to providing the methods for the visualisation and exploration of the features of contigs in the context of sample coverages, supports a comprehensive also a set of multivariate statistical algorithms to allow exploratory as well as hypothesis driven analyses. The provided tools have been simplified and implemented in the form of intuitive workflows tailored to the need of non-expert users. For convenience, all these techniques have been categorised and included in the ```Methods``` tab of the software.
 
 **Step 1: Importing the data into the software**
 
@@ -190,7 +190,14 @@ In this example, we will assume again that you have already imported the require
 [![animation](https://user-images.githubusercontent.com/30604050/89131615-03e3c400-d506-11ea-8d08-b388771c1c09.png)](https://www.youtube.com/watch?v=_028HSzxUdw)
 
 ### Permutational Multivariate Analysis of Variance
-Given a community dataset and a set of predictor physico-chemical variables, PERMANOVA can be used to provide information about the percentage of variation (R2) explained by the given predictors and the significance associated with it (P-value). The results of the PERMANOVA analysis are exported into a summary file containing sources of variation, degrees of freedom, sequential sums of squares, mean squares, K statistics, partial R-squared and P-values, based on N permutations. In addition, the percentage (%) of variation explained (R2) by different predictor variables with annotation for significance can be visualized in the software in the form of a Bar Plot or a Pie chart.
+Given a community dataset and a set of predictor physico-chemical variables, PERMANOVA can be used to provide information about the percentage of variation (R2) explained by the given predictors and the significance associated with it (P-value). The results of the PERMANOVA analysis are exported into a summary file containing sources of variation, degrees of freedom, sequential sums of squares, mean squares, K statistics, partial R-squared and P-values, based on N permutations. In addition, the percentage (%) of variation explained (R2) by different predictor variables with annotation for significance can be visualised in the software in the form of a Bar Plot or a Pie chart. CViewer provides the following options for using PERMANOVA:
+
+* A ```text-field```**```(Y~)```** used to provide the formula with the independent variables to be tested (e.g. Y ~ Group + pH + Calprotectin)
+* ```Distance:``` a drop-down menu with the available distances methods (Euclidean, Bray-Curtis and Jaccard) to calculate pairwise distances 
+* ```Style:``` results can be visualised in the form of a Bar Plot or a Pie chart
+* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) should the results be displayed.
+
+
 
 ![Beta_diversity 2020-01-12 21_13_52](https://user-images.githubusercontent.com/30604050/72225708-7b5d0080-3580-11ea-9dd0-b2c5809ed7d2.gif)
 
