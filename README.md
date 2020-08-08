@@ -272,7 +272,7 @@ A component is characterised as common, if the ratios between the explained vari
 
 **Step 4: Configuring the analysis**
 
-Integrated analysis of the given datasets can be performed by using either DISCO-SCA, JIVE or O2PLS. The individual data-blocks can be labelled for clarity and the number of common and distinctive components that were estimated using the Model Selection function can be provided as input to the integrative methods. Pre-processing of the data is supported from the tool and should be considered at this stage of the analysis (see Step 1: Data pre-processing). These features are provided through the following options:
+Integrated analysis of the given datasets can be performed by using either DISCO-SCA, JIVE or O2PLS. The individual data-blocks can be labelled and the number of common and distinctive components that were previously estimated using the Model Selection function can be provided as an input to the software. Pre-processing of the data is also supported and should be considered at this stage of the analysis (see Step 1: Data pre-processing). These features are provided through the following options:
 
 * ```Method:``` the method of the integrative analysis (DISCO-SCA, JIVE or O2PLS)
 * ```Names:``` the labels of the dasasets, one for each block of data, separated by comma (e.g. metagenome, metabolome)
