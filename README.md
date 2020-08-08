@@ -267,7 +267,8 @@ A component is characterised as common, if the ratios between the explained vari
 * ```Rel. variance thres.:``` relative variance criteria for ```fixed.num```
 * ```PC components:``` fixed number of components for ```fixed.num```
 
-========================= video
+See video below for more details:
+[![animation](https://user-images.githubusercontent.com/30604050/89131615-03e3c400-d506-11ea-8d08-b388771c1c09.png)](https://www.youtube.com/watch?v=c_HTw0MlYj4)
 
 
 **Step 4: Configuring the analysis**
@@ -293,7 +294,8 @@ Once the above steps have been successfully performed, CViewer then provides a f
 * ```Comps.:``` whether the labels for the dataset samples should be displayed on the plot
 * ```Panel:``` which panel (upper left/right and bottom left/right) should be used to plot the results
 
-========================= video
+This is illustrated in the following video:
+[![animation](https://user-images.githubusercontent.com/30604050/88488454-151c5600-cf85-11ea-8865-c9f32f40e30b.png)](https://www.youtube.com/watch?v=H2HApGkVZnM)
 
 Moreover, the loading contributions of each dataset to the common structure can be examined across the number of the available common components, where loadings weights can be sorted according to importance based on absolute values. This is done by adjusting the following options:
 * ```Contrib.:``` whether the loading contributions should be displayed
@@ -302,10 +304,9 @@ Moreover, the loading contributions of each dataset to the common structure can 
 * ```Top:``` the number of the first ***```x```*** variables (e.g. species, metabolites) to plot
 * ```Panel:``` which panel (upper left/right and bottom left/right) should be used to plot the results
 
-========================= video
+See animation below:
+[![animation](https://user-images.githubusercontent.com/30604050/88488271-f8cbe980-cf83-11ea-87f5-02cbfba904d9.png)](https://www.youtube.com/watch?v=AL4s6EFxCY4)
 
-
-![Multiomics 2020-01-12 23_14_50](https://user-images.githubusercontent.com/30604050/72227185-65a40700-3591-11ea-812e-83802d663581.gif)
 
 ## Charts
 ```CViewer``` provides also a separate tab for the visualisation of charts, with a Line Chart and a Box Plot Chart being supported by the software. This feature is primarily provided as an extra visualisation tool where it is possible to display information as a series of data points, particularly in the case of the Line Chart, and explore trends and patterns between pairs of variables (described from the X and Y axes). For each graph, it is possible to colour the data according to a specific grouping variable of interest. In addition, the Box Plot chart can represent every kind of interval observation using five different measures, i.e. the min, the max, the median and the lower and upper quartiles. This can be a very useful tool when ones need to display the distribution of data, identify outliers, and inspect if and how symmetrical or skewed the data are.
