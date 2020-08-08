@@ -107,9 +107,41 @@ Once we have completed the above step, the complete collection of molecular path
 [![animation](https://user-images.githubusercontent.com/30604050/88488454-151c5600-cf85-11ea-8865-c9f32f40e30b.png)](https://www.youtube.com/watch?v=21Ky1zD2mwU&feature=youtu.be)
 
 ## Phylogenetic diversity
-Community phylogenetic a-diversity analysis is possible with ```CViewer``` software. We have considered two  metrics which have been been suggested by Webb (2000) and proved useful for phylogenetic structure analysis, as a measure of phylogenetic clustering or overdispersion, namely the _Net Relatedness Index_ (NRI) and _Nearest Taxon Index_ (NTI). The system provides a set of essential genes that can be extracted from the contigs for creating a phylogenetic tree with support for manual selection as well. Using the tree and abundance data, community phylogenetic structure whether clustered or over-dispersed can be explored through the implemented phylogenetic α-diversity indices. The user can then choose between two different null models to generate the null communities. These include randomizations within samples while maintaining the species richness or within species while maintaining species frequency. In addition, it is possible to choose from a weighted (where the NRI and NTI metrics for each species are weighted by species abundance) or unweighted approach when performing analysis.
+Community phylogenetic a-diversity analysis is possible with ```CViewer``` software. We have considered two  metrics which have been been suggested by Webb (2000) and proved useful for phylogenetic structure analysis, as a measure of phylogenetic clustering or overdispersion, namely the _Net Relatedness Index_ (NRI) and _Nearest Taxon Index_ (NTI). 
 
-<img src="https://user-images.githubusercontent.com/30604050/73015454-f68da480-3e13-11ea-948d-adb888c553db.gif" width="900" height="550" />
+**Step 1: Extracting Gene from contigs**
+
+Before extracting the gene data, we need to **make sure that we have first imported the output from CONCOCT (PCA file, coverage and clustering files; see Section: Visualising the metagenomics contigs) and PROKKA (GenBank file) pipelines into the software**. Then, in order to perform phylogenetic analysis with CViewer, one first needs to generate a phylogenetic tree. To do this, the system provides a set of essential genes (Campbell et al.) that can be extracted from the contigs for creating a phylogenetic tree with support for manual selection as well. After the gene has been specified, the gene sequences are extracted for each cluster of the WGS dataset and saved in a ```.fasta``` file in the *Output* folder, along with the average coverages of clusters across the samples of the dataset. 
+
+To illustrate the process described right above we will use the output from CONCOCT for the metagenomics profiling of 144 feacal extracts collected from Crohn's Disease (CD) patients undergoing dietary treatment with Exclusive Enteral Nutrition, Healthy Crohn's disease relatives and Healthy individuals (Quince et al.). Metagenomics reads were assembled and grouped into bins using CONCOCT pipeline, which resulted in 977 genomic bins from a total number of 636,062 assembled contigs. The following video demonstrate how the gene data is extracted from the above dataset using CViewer. Please note that depending on the dataset size this process might require a few minutes to complete (approx. 12mins for a MacBook Pro with a 2.6 GHz Intel Core i5 processor):
+
+[![animation](https://user-images.githubusercontent.com/30604050/89720701-1a3dc400-d9cd-11ea-87d0-fe84a284bd43.png)](https://www.youtube.com/watch?v=xD9wu2yXEOw)
+
+
+**Step 2: Creating the phylogenetic tree**
+
+Once we have generated the sequence ```.fasta``` file, this can be next processed with third party tools to generate the phylogenetic tree, such as MUSCLE for performing the alignment and FastTree for producing the tree. Once this is accomplished, the obtained tree and the table describing the abundances across the dataset clusters (generated from the previous step) are uploaded to the software, to calculate the ***```NRI```*** and ***```NTI```*** indices. 
+
+**Step 3: Phylogenetic a-diversity analysis**
+
+Using the tree and the abundance data obtained from the previous steps, community phylogenetic structure whether clustered or over-dispersed can be explored through the implemented phylogenetic α-diversity indices. The user can then choose between two different ```null models``` to generate the null communities. These include randomizations within samples while maintaining the species richness or within species while maintaining species frequency. In addition, it is possible to choose from a weighted (where the NRI and NTI metrics for each species are weighted by species abundance) or unweighted approach when performing analysis. This is achieved by using the following steps and options:
+
+The data are imported by clicking next to:
+* ```Import tree:``` for the phylogenetic tree (e.g. alaS.tre)
+* ```Import table:``` for the abundance data (e.g. alaS.csv)
+* ```Import metadata:``` for the file with the associated metadata (e.g. CICRA_project_metadata.csv)
+
+The analysis is configured based on the following parameters:
+* ```Group by:``` the labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
+* ```Maintain:``` whether randomizations should be done within samples while maintaining the species richness or within species while maintaining species frequency
+* ```NRI```, ```NTI``` tickboxs: whether NRI or NTI should be estimated
+* ```weighted``` tickbox: whether the NRI and NTI metrics for each species should be weighted by species abundance
+* ```runs```: number of randomizations
+* ```Show tree```: whether the phylogenetic tree should be displayed
+* ```Panel:``` which panel (upper left/right and bottom left/right) should be used for plotting the results
+
+The above steps are illustrated in the following video:
+[![animation](https://user-images.githubusercontent.com/30604050/89720708-24f85900-d9cd-11ea-8735-aef8cd65e3f4.png)](https://www.youtube.com/watch?v=ql0rcEjPeqs)
 
 
 ## Data analysis tools & techniques
@@ -118,7 +150,7 @@ CViewer, in addition to providing the methods for the visualisation and explorat
 
 **Step 1: Importing the data into the software**
 
-Most of the provided techniques require an abundance table and a metadata file containing the labels for the treatment groups in order to run. Once you have uploaded the required data, you should already be able to use most of the methods to explore them and there is no need for uploading the data again when you want to use a different statistical method. So, first, let's provide the required information to the software. To do this, you will need to navigate yourself to the ```Methods``` tab and then to the ```Input Data``` section of that tab. For demonstration purposes, in this tutorial, we have included an abundance table describing the average coverages across 976 clusters (obtained through CONCOCT software) and 144 samples collected from Crohn's Disease (CD) patients undergoing dietary treatment with Exclusive Enteral Nutrition, Healthy Crohn's disease relatives and Healthy individuals. To import these data into the software, please do as follows:
+Most of the provided techniques require an abundance table and a metadata file containing the labels for the treatment groups in order to run. Once you have uploaded the required data, you should already be able to use most of the methods to explore them and there is no need for uploading the data again when you want to use a different statistical method. So, first, let's provide the required information to the software. To do this, you will need to navigate yourself to the ```Methods``` tab and then to the ```Input Data``` section of that tab. For demonstration purposes, in this tutorial, we have included an abundance table describing the average coverages across 977 clusters (obtained through CONCOCT software) and 144 samples collected from Crohn's Disease (CD) patients undergoing dietary treatment with Exclusive Enteral Nutrition, Healthy Crohn's disease relatives and Healthy individuals. To import these data into the software, please do as follows:
 
 In a way similar to the one described in previous sections, click the **Open** button next to
 * ```Table:``` to import your abundance table (e.g. CICRA_average_coverages.csv)
@@ -132,9 +164,9 @@ CViewer provides a number of popular normalisation techniques for reducing syste
 After we have performed the above steps, we can start exploring our data in CViewer. The tool allows alpha diversity analyses and considers a number of popular indices that can be used to interrogate the input datasets. We have considered the Shannon's (H'), Simpson’s diversity (D1) and its inverse (D2) which account for species richness and abundance. To measure how similar the distributions of species in a community are to each other, the tool provides the Pielou’s evenness. Finally, the relative proportions of the most dominant taxa for a given community dataset can also be explored. In each case, the generated plots can be **customised (e.g. change X-Y axis font size, range etc.) by right-clicking** on the plot and can be extracted into a ```PNG``` file for publication or further research. In the given menu you will find the options described below:
 
 * ```Index:``` a drop-down menu with the available a-diversity methods (e.g. Shannon, Simpson etc.)
-* ```Group by:``` a drop-down menu with the columns containing labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
+* ```Group by:``` the labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
 * ```Taxa number:``` field activated when one wants to explore the ***Relative proportions*** of the most abundant clusters/species in a groups of samples and used for showing the number of the ***X*** top clusters/species in each group that one wishes to inspect.
-* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) the results should be displayed
+* ```Panel:``` which panel (upper left/right and bottom left/right) should be used for plotting the results
 
 See the animation below for more details:
 [![animation](https://user-images.githubusercontent.com/30604050/89131606-fcbcb600-d505-11ea-89e5-dff538ceb576.png)](https://www.youtube.com/watch?v=qj6zGOsl_24)
@@ -147,9 +179,9 @@ Principal component analysis is one of the most popular among the existing dimen
 
 * A ```check-box``` with the label ***All dimensions (max 8)***: default option used when the user has not specified the number of PCA components to be returned
 * ```Num:``` field used to specify, if desired, the number of PCA components to be calculated
-* ```Group by:``` a drop-down menu with the columns containing labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
+* ```Group by:``` the labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
 * ```Components:``` slider bar giving a means to shift between PCA components
-* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) the results should be displayed
+* ```Panel:``` which panel (upper left/right and bottom left/right) should be used for plotting the results
 
 In this example, we will use the same steps that were described in the previous section for Alpha diversity analysis for uploading the data and the same dataset. In this case, however, we will first normalise our data before generating the PCA plot. To do that, one can use the ```drop-down``` menu provided in the tool and described in section **Step 2: Normalising the abundance data**.
 
@@ -161,7 +193,7 @@ Similar to PCA, Multidimensional scaling (MDS), also known as Principal Coordina
 
 * ```Distance:``` a drop-down menu with the available distances methods (Euclidean, Bray-Curtis and Jaccard)
 * ```Group by:``` a drop-down menu with the columns containing labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
-* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) the results should be displayed
+* ```Panel:``` which panel (upper left/right and bottom left/right) should be used for plotting the results
 
 Following from the previous demonstration, in this example, we will assume that you have already imported the required data, i.e. abundance table and metadata, into the software. Then, the video belows shows how MDS is performed in CViewer:
 [![animation](https://user-images.githubusercontent.com/30604050/89131612-02b29700-d506-11ea-93ad-e30fd18fbd9f.png)](https://www.youtube.com/watch?v=qj6zGOsl_24)
@@ -174,9 +206,9 @@ In fuzzy set ordination samples are assigned gradual membership values (fuzzy) r
 * ```Experimental variables:``` a ```CSV``` table describing the available experimental/environmental variables (Euclidean, Bray-Curtis and Jaccard) such as pH, Temperature, Calprotectin levels etc.
 * ```Similarity index:``` a drop-down menu with the available similarity indices (Baroni-Urbani & Buser, Horn and Yule)
 * ```Variable:``` field used to specify the environmetal variable of interest
-* ```Group by:``` a drop-down menu with the columns containing labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
+* ```Group by:``` the labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
 * ```Permutations:``` the number of permutations to be used for deriving the ***p-values*** (typically 1000)
-* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) the results should be displayed
+* ```Panel:``` which panel (upper left/right and bottom left/right) should be used for plotting the results
 
 In this example, we will assume again that you have already imported the required data, i.e. abundance table and metadata, into the software. Let's say that we are then interested in exploring if e.g. there is an association between the community composition of the gut microbiome of Crohn's disease patients with calprotectin levels or with the levels of SCFAs and how this differs between patients who achieved or not clinical remission at the end of EEN treatment (point D). Then, the video belows shows how FSO is performed for inspecting this in CViewer:
 [![animation](https://user-images.githubusercontent.com/30604050/89131615-03e3c400-d506-11ea-8d08-b388771c1c09.png)](https://www.youtube.com/watch?v=_028HSzxUdw)
@@ -187,7 +219,7 @@ Given a community dataset and a set of predictor physico-chemical variables, PER
 * A ```text-field```**```(Y~)```** used to provide the formula with the independent variables to be tested (e.g. Y ~ Group + pH + Calprotectin)
 * ```Distance:``` a drop-down menu with the available distances methods (Euclidean, Bray-Curtis and Jaccard) that can be used to calculate pairwise distances 
 * ```Style:``` results can be visualised in the form of a *Bar Plot* or a *Pie chart*
-* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) the results should be displayed
+* ```Panel:``` which panelupper left/right and bottom left/right) should be used for plotting the results
 
 This is demonstrated in the video below. We will assume again that you have already imported the required data, i.e. the abundance table and the metadata, into the software.:
 [![animation](https://user-images.githubusercontent.com/30604050/89682919-6fa3a380-d8ef-11ea-9d62-f64af5ff7174.png)](https://www.youtube.com/watch?v=iga4uoq3U-w)
@@ -200,8 +232,8 @@ Differential abundance analysis can be valuable when investigating for features 
 * ```Objects:``` how many objects or groups we would like to viusalise in the plot from the total number of the returned features that were found significant 
 * ```Post-hoc test:``` whether a post-hoc test should be performed with the Kruskal-Wallis test (based on Dunn’s post hoc procedure)
 * ```Adjust P-Values:``` whether P-Values should be adjusted to account for multiple comparisons (based on Benjamini-Hochberg's method)
-* ```Group by:``` a drop-down menu with the columns of the metadata file describing the labels for the dataset samples (e.g. CICRA_project_metadata.csv)
-* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) the results should be displayed
+* ```Group by:``` the labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
+* ```Panel:``` which panel (upper left/right and bottom left/right) should be used for plotting the results
 
 The example below illustrates how the above options are used in CViewer in order to perform differential abundance analysis. We will assume that you have already imported the required data, i.e. the abundance table and the metadata. Now, let's say that we are interested in exploring, e.g., whether any species (CONCOCT clusters) in the gut microbiome of CD patients change significantly in abundance during the EEN treamtent, and how this differs from the healthy baseline:
 
@@ -227,7 +259,7 @@ Prior to analysis, the input tables can be normalised, filtered and/or sorted ac
 * ```Filter Y (>):``` keep the rows of ***table Y*** for which the total sum is greater than that of the "filter Y" value 
 * ```Top (applied to X or Y table whether right next to Filter X or Filter Y):``` Return the first "Top" features from table ***X*** or ***Y*** depending on selection
 * ```Sort (applied to X or Y table whether right next to Filter X or Filter Y):``` Sort the returned features of table ***X*** or ***Y*** (depending on selection) based on abundance in decreasing order
-* ```Panel:``` used for specifying in which one of the four panels provided (upper left/right and bottom left/right) the results should be displayed
+* ```Panel:``` which panel (upper left/right and bottom left/right) should be used for plotting the results
 
 The video below shows how these options are used to perform Correlation analysis in CViewer. Let's assume that we interested in exploring for any underlying association between the metagenomics clusters or species of the WGS dataset and some additional variables that were measured on the same dataset samples:
 
@@ -291,7 +323,7 @@ Once the above steps have been successfully performed, CViewer then provides a f
 * ```Group by:``` the labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
 * ```Comps.:``` the ***```x```***  and ***```y```*** components to plot for the chosen type and block. If ```Combined=true```, it indicates the component to plot for the first block and the component for the second block to plot together.
 * ```Comps.:``` whether the labels for the dataset samples should be displayed on the plot
-* ```Panel:``` which panel (upper left/right and bottom left/right) should be used to plot the results
+* ```Panel:``` which panel (upper left/right and bottom left/right) should be used for plotting the results
 
 This is illustrated in the following video:
 [![animation](https://user-images.githubusercontent.com/30604050/89717265-8956f080-d9ac-11ea-91cd-6f4650a75f57.png)](https://www.youtube.com/watch?v=H2HApGkVZnM)
@@ -301,7 +333,7 @@ Moreover, the loading contributions of each dataset to the common structure can 
 * ```Sort:``` whether the loading contributions should be sorted according to importance based on absolute values
 * ```Comp.:``` the component of the common structure to plot
 * ```Top:``` the number of the first ***```x```*** variables (e.g. species, metabolites) to plot
-* ```Panel:``` which panel (upper left/right and bottom left/right) should be used to plot the results
+* ```Panel:``` which panel (upper left/right and bottom left/right) should be used for plotting the results
 
 See animation below:
 [![animation](https://user-images.githubusercontent.com/30604050/89717267-8b20b400-d9ac-11ea-9420-1351763eaf53.png)](https://www.youtube.com/watch?v=AL4s6EFxCY4)
