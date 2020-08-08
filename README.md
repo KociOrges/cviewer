@@ -111,7 +111,7 @@ Community phylogenetic a-diversity analysis is possible with ```CViewer``` softw
 
 **Step 1: Extracting Gene from contigs**
 
-Before extracting the gene data, we need to **make sure that we have first imported the output from CONCOCT (PCA file, coverage and clustering files; see Section: Visualising the metagenomics contigs) and PROKKA (GenBank file) pipelines into the software**. Then, in order to perform phylogenetic analysis with CViewer, one first needs to generate a phylogenetic tree. To do this, the system provides a set of essential genes (Campbell et al.) that can be extracted from the contigs for creating a phylogenetic tree with support for manual selection as well. After the gene has been specified, the gene sequences are extracted for each cluster of the WGS dataset and saved in a ```.fasta``` file in the *Output* folder, along with the average coverages of clusters across the samples of the dataset. 
+Before extracting the gene data, we need to **make sure that we have first imported the output from CONCOCT (PCA file, coverage and clustering files; see Section: Visualising the metagenomics contigs) and PROKKA (GenBank file) pipelines into the software**. Then, in order to perform phylogenetic analysis with CViewer, one first needs to generate a phylogenetic tree. To do this, the system provides a set of essential genes (Campbell et al.) that can be extracted from the contigs for creating a phylogenetic tree with support for manual selection as well. After the gene has been specified, the gene sequences are extracted for each cluster of the WGS dataset and saved in a ```.fasta``` file in the *Output/* folder, along with the average coverages of clusters across the samples of the dataset. 
 
 To illustrate the process described right above we will use the output from CONCOCT for the metagenomics profiling of 144 feacal extracts collected from Crohn's Disease (CD) patients undergoing dietary treatment with Exclusive Enteral Nutrition, Healthy Crohn's disease relatives and Healthy individuals (Quince et al.). Metagenomics reads were assembled and grouped into bins using CONCOCT pipeline, which resulted in 977 genomic bins from a total number of 636,062 assembled contigs. The following video demonstrate how the gene data is extracted from the above dataset using CViewer. Please note that depending on the dataset size this process might require a few minutes to complete (approx. 12mins for a MacBook Pro with a 2.6 GHz Intel Core i5 processor):
 
@@ -120,18 +120,18 @@ To illustrate the process described right above we will use the output from CONC
 
 **Step 2: Creating the phylogenetic tree**
 
-Once we have generated the sequence ```.fasta``` file, this can be next processed with third party tools to generate the phylogenetic tree, such as MUSCLE for performing the alignment and FastTree for producing the tree. Once this is accomplished, the obtained tree and the table describing the abundances across the dataset clusters (generated from the previous step) are uploaded to the software, to calculate the ***```NRI```*** and ***```NTI```*** indices. 
+Once we have generated the sequence ```.fasta``` file, this can be next processed with third party tools to generate the phylogenetic tree, such as *MUSCLE* for performing the alignment and *FastTree* for producing the tree. Once this is accomplished, the obtained tree and the table describing the abundances across the dataset clusters (generated from the previous step) are uploaded to the software, to calculate the ***```NRI```*** and ***```NTI```*** indices. 
 
 **Step 3: Phylogenetic a-diversity analysis**
 
 Using the tree and the abundance data obtained from the previous steps, community phylogenetic structure whether clustered or over-dispersed can be explored through the implemented phylogenetic α-diversity indices. The user can then choose between two different ```null models``` to generate the null communities. These include randomizations within samples while maintaining the species richness or within species while maintaining species frequency. In addition, it is possible to choose from a weighted (where the NRI and NTI metrics for each species are weighted by species abundance) or unweighted approach when performing analysis. This is achieved by using the following steps and options:
 
-The data are imported by clicking next to:
+The data are first imported by clicking next to:
 * ```Import tree:``` for the phylogenetic tree (e.g. alaS.tre)
 * ```Import table:``` for the abundance data (e.g. alaS.csv)
 * ```Import metadata:``` for the file with the associated metadata (e.g. CICRA_project_metadata.csv)
 
-The analysis is configured based on the following parameters:
+Then, the analysis can be configured based on the following parameters:
 * ```Group by:``` the labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
 * ```Maintain:``` whether randomizations should be done within samples while maintaining the species richness or within species while maintaining species frequency
 * ```NRI```, ```NTI``` tickboxs: whether NRI or NTI should be estimated
@@ -148,15 +148,19 @@ The above steps are illustrated in the following video:
 
 CViewer, in addition to providing the methods for the visualisation and exploration of the features of contigs in the context of sample coverages, supports a comprehensive also a set of multivariate statistical algorithms to allow exploratory as well as hypothesis driven analyses. The provided tools have been simplified and implemented in the form of intuitive workflows tailored to the need of non-expert users. For convenience, all these techniques have been categorised and included in the ```Methods``` tab of the software.
 
-**Step 1: Importing the data into the software**
+**Step 1: Preparing the data**
 
-Most of the provided techniques require an abundance table and a metadata file containing the labels for the treatment groups in order to run. Once you have uploaded the required data, you should already be able to use most of the methods to explore them and there is no need for uploading the data again when you want to use a different statistical method. So, first, let's provide the required information to the software. To do this, you will need to navigate yourself to the ```Methods``` tab and then to the ```Input Data``` section of that tab. For demonstration purposes, in this tutorial, we have included an abundance table describing the average coverages across 977 clusters (obtained through CONCOCT software) and 144 samples collected from Crohn's Disease (CD) patients undergoing dietary treatment with Exclusive Enteral Nutrition, Healthy Crohn's disease relatives and Healthy individuals. To import these data into the software, please do as follows:
+Most of the provided techniques require an abundance table and a metadata file containing the labels for the treatment groups in order to run. You can use CViewer to obtain an abundance table from the metagenomics contigs, based on the clustering and the coverage information of the contigs across the dataset samples that were generated through CONCOCT pipeline. To do this, the software provides a specific method that is found in the ```Main``` tab and is called ```Extract Table```. To generate the table all you have to do is to press the ```Apply``` button right next to the label ```Extract average coverages```. This will generate a table describing the averages coverages of the clusters across the dataset samples and put it in the *Output/* folder. You can also choose to label the dataset clusters with the taxonomic labels that were assigned with, if these are availabe, and which were imported into the software during the previous steps (see Section: Visualising the metagenomics contigs).
+
+
+**Step 2: Importing the data into the software**
+Once you have uploaded the required data, you should already be able to use most of the methods to explore them and there is no need for uploading the data again when you want to use a different statistical method. So, first, let's provide the required information to the software. To do this, you will need to navigate yourself to the ```Methods``` tab and then to the ```Input Data``` section of that tab. For demonstration purposes, in this tutorial, we have included an abundance table describing the average coverages across 977 clusters (obtained through CONCOCT software) and 144 samples collected from Crohn's Disease (CD) patients undergoing dietary treatment with Exclusive Enteral Nutrition, Healthy Crohn's disease relatives and Healthy individuals. To import these data into the software, please do as follows:
 
 In a way similar to the one described in previous sections, click the **Open** button next to
 * ```Table:``` to import your abundance table (e.g. CICRA_average_coverages.csv)
 * ```Metadata:``` to import the file with the associated metadata (e.g. CICRA_project_metadata.csv)
 
-**Step 2: Normalising the abundance data**
+**Step 3: Normalising the abundance data**
 
 CViewer provides a number of popular normalisation techniques for reducing systematic variation in data. In particular, abundance data can be normalised by using a relative or log-relative transformation, a log transformation based on the natural or the base 2 logarithm, or a Pareto scaling (used mostly for normalising metabolomics data). To do that, one only needs to choose the normalisation method that he wants to use for the data by selecting from the ones provided in the given drop-down list located right next to the button that was used for uploading the abundace data.
 
