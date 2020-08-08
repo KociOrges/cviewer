@@ -284,9 +284,9 @@ Integrated analysis of the given datasets can be performed by using either DISCO
 
 Once the above steps have been successfully performed, CViewer then provides a flexible framework for plotting the results. One can choose between common or individual results to be explored and can specify the 'omics dataset that he wants to inspect. The tool allows plotting of scores, loadings or both, for common and distinctive parts, while combined plots of both parts can also be produced. To do this, the **```Plots```** section provides the following options:
 
-* ```What:``` either "scores", "loadings" or "both"
-* ```Type:``` either "common", "individual" or "both"
-* ```Block:``` which block to plot, either "1" or "2"
+* ```What:``` either ```scores```, ```loadings``` or ```both```
+* ```Type:``` either ```common```, ```individual``` or ```both```
+* ```Block:``` which block to plot, either ```1``` or ```2```
 * ```Combined:``` whether to make a plot of two components from one block, or components from different blocks
 * ```Group by:``` the labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
 * ```Comps.:``` the ***```x```***  and ***```y```*** components to plot for the chosen type and block. If ```Combined=true```, it indicates the component to plot for the first block and the component for the second block to plot together.
