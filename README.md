@@ -238,12 +238,11 @@ The video below shows how these options are used to perform Correlation analysis
 Integrative analysis methods can provide better understanding and interpretation of the composite biological datasets and help elucidate the dynamics of the complex biological systems at a greater scale. ```CViewer```, implements three different techniques that have been proposed for a simultaneous analysis of multiple omics datasets, namely Simultaneous Component Analysis with rotation to COmmon and DIstinctive components (DISCO-SCA), Joint and Individual Variation Explained (JIVE) and Two-way Orthogonal Partial Least Squares (O2PLS). All of them are helpful for providing a “global” view on the biological system of interest by decomposing the variability of the composite omics datasets into a joint variability or common structure, that represents the mechanisms underlying all of the omics datasets under study, and individual variability or distinctive structure, that represents the biological mechanisms underlying a single omics dataset.
 
 **Step 1: Collecting the data**
-
 To illustrate how CViewer is useful for an integrated analysis of multi'omics datasets, we will use as previously, the WGS metagenomics profile of Crohn's Disease patients undergoing dietary treatment with Exclusive Enteral Nutrition and healthy individuals. In addition, as a second dataset, we will use a LC-MS metabolomics profile of 4,255 metabolites that were identified in 11 faecal extracts from eleven healthy children and to 54 faecal extracts from eleven children undergoing EEN for the treatment of active CD at timepoints before, during (15, 30, and 60 days), and after treatment (Alghamdi et al. 2018). To import these data into the software we will do as follows:
 
 Click the **Open** button right next to:
-* ```Table X:``` to import the first omics dataset ***X***, where rows describe samples and columns features/variables/species (e.g. CICRA_average_coverages.csv)
-* ```Table Y:``` to import the second omics dataset ***Y***, where rows describe samples and columns features/variables/species (e.g. CICRA_metabolomics.csv)
+* ```Table X:``` to import the first omics dataset ***X***, where rows describe samples and columns features/variables (e.g. CICRA_average_coverages.csv)
+* ```Table Y:``` to import the second omics dataset ***Y***, where rows describe samples and columns features/variables (e.g. CICRA_metabolomics.csv)
 * ```Normalise:``` normalisation can be performed individually for each dataset
 
 **Step 2: Data pre-processing**
