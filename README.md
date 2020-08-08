@@ -238,6 +238,7 @@ The video below shows how these options are used to perform Correlation analysis
 Integrative analysis methods can provide better understanding and interpretation of the composite biological datasets and help elucidate the dynamics of the complex biological systems at a greater scale. ```CViewer```, implements three different techniques that have been proposed for a simultaneous analysis of multiple omics datasets, namely Simultaneous Component Analysis with rotation to COmmon and DIstinctive components (DISCO-SCA), Joint and Individual Variation Explained (JIVE) and Two-way Orthogonal Partial Least Squares (O2PLS). All of them are helpful for providing a “global” view on the biological system of interest by decomposing the variability of the composite omics datasets into a joint variability or common structure, that represents the mechanisms underlying all of the omics datasets under study, and individual variability or distinctive structure, that represents the biological mechanisms underlying a single omics dataset.
 
 **Step 1: Collecting the data**
+
 To illustrate how CViewer is useful for an integrated analysis of multi'omics datasets, we will use as previously, the WGS metagenomics profile of Crohn's Disease patients undergoing dietary treatment with Exclusive Enteral Nutrition and healthy individuals. In addition, as a second dataset, we will use a LC-MS metabolomics profile of 4,255 metabolites that were identified in 11 faecal extracts from eleven healthy children and to 54 faecal extracts from eleven children undergoing EEN for the treatment of active CD at timepoints before, during (15, 30, and 60 days), and after treatment (Alghamdi et al. 2018). To import these data into the software we will do as follows:
 
 Click the **Open** button right next to:
@@ -245,11 +246,13 @@ Click the **Open** button right next to:
 * ```Table Y:``` to import the second omics dataset ***Y***, where rows describe samples and columns features/variables (e.g. CICRA_metabolomics.csv)
 * ```Normalise:``` normalisation can be performed individually for each dataset
 
+
 **Step 2: Data pre-processing**
 
 In an integrative or simultaneous analysis of multiple datasets, it is expected that the different blocks comprising the data are linked with a common set of entities. The tool supports an integrative analysis for two omics datasets that are linked by a common sample space, i.e. the measurements from the different omics data are obtained for the same set of samples (e.g. Crohn’s disease or Healthy individuals).
 
 Prior to analysis, it is useful that the data are pre-processed. As the data are generated from different omics technologies, they may be considerably different in size and describe features that are expressed in scales that are hard to compare, affecting this way the analysis results. ```CViewer``` provides a number of pre-processing steps that can be applied to correct these differences. When the variables differ largely in scales (or abundance), one may consider ***centring*** the variables and/or ***scale*** them within each block to a sum of squares of one. In addition, ***weighting*** blocks together can be useful to avoid the effects of blocks having considerably different sizes.
+
 
 **Step 3: Model selection**
 
@@ -259,6 +262,7 @@ A component is characterised as common, if the ratios between the explained vari
 
 ========================= video
 
+
 **Step 4: Configuring the analysis**
 
 Integrated analysis of the given datasets can be performed by using either DISCO-SCA, JIVE or O2PLS. The individual data-blocks can be labelled for clarity and the number of common and distinctive components that were estimated using the Model Selection function can be provided as input to the integrative methods. Pre-processing of the data is supported from the tool and should be considered at this stage of the analysis (see Step 1: Data pre-processing). These features are provided through the following options:
@@ -267,6 +271,7 @@ Integrated analysis of the given datasets can be performed by using either DISCO
 * ```Names:``` the labels of the dasasets, one for each block of data, separated by comma (e.g. metagenome, metabolome)
 * ```Common:``` the number of common components
 * ```Distinctive:``` the number of distinctive components, one for each block of data, separated by comma
+
 
 **Step 5: Plotting the results**
 
