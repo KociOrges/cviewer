@@ -118,7 +118,7 @@ CViewer, in addition to providing the methods for the visualisation and explorat
 
 **Step 1: Importing the data into the software**
 
-Most of the provided techniques require an abundance table and a metadata file containing the labels for the treatment groups in order to run. Once you have uploaded the required data, you should already be able to use most of the methods to explore them and there is no need for uploading the data again when you want to use a different statistical method. So, first, let's provide the required information to the software. To do this, you will need to navigate yourself to the ```Methods``` tab and then to the ```Input Data``` section of that tab. For demonstration purposes, in this tutorial, we have included an abundance table describing the average coverages across 976 clusters (obtained through CONCOCT software) and 144 samples collected from Crohn's disease patients undergoing dietary treatment with Exclusive Enteral Nutrition, Healthy Crohn's disease relatives and Healthy individuals. To import these data into the software, please do as follows:
+Most of the provided techniques require an abundance table and a metadata file containing the labels for the treatment groups in order to run. Once you have uploaded the required data, you should already be able to use most of the methods to explore them and there is no need for uploading the data again when you want to use a different statistical method. So, first, let's provide the required information to the software. To do this, you will need to navigate yourself to the ```Methods``` tab and then to the ```Input Data``` section of that tab. For demonstration purposes, in this tutorial, we have included an abundance table describing the average coverages across 976 clusters (obtained through CONCOCT software) and 144 samples collected from Crohn's Disease (CD) patients undergoing dietary treatment with Exclusive Enteral Nutrition, Healthy Crohn's disease relatives and Healthy individuals. To import these data into the software, please do as follows:
 
 In a way similar to the one described in previous sections, click the **Open** button next to
 * ```Table:``` to import your abundance table (e.g. CICRA_average_coverages.csv)
@@ -215,8 +215,8 @@ We have considered the Pearson’s product-moment coefficient to measure the deg
 Prior to analysis, the input tables can be normalised, filtered and/or sorted according to threshold values provided from the user. For a selected correlation coefficient, a full report can be displayed containing the correlation value (R) and the statistical significance (P-value and adjusted P-value) obtained for each pairwise comparison between the elements of the two data matrices. To do this, the software provides a number of options that can be used to configure the analysis and which are described below:
 
 **Step 1: Input Data: Importing the data into the software**
-* ```Table X:``` the X table with *N* number of rows, where rows describe samples (e.g. CICRA_average_coverages.csv)
-* ```Table Y:``` the Y table also with *N* number of rows, where rows describe samples (e.g. CICRA_bacterial_metabolites.csv)
+* ```Table X:``` the X table, where rows describe samples and columns features/variables/species (e.g. CICRA_average_coverages.csv)
+* ```Table Y:``` the Y table, where rows describe samples and columns features/variables/species (e.g. CICRA_bacterial_metabolites.csv)
 * ```Normalise:``` normalisation can be performed individually for each matrix
 * ```Metadata:``` the file with the associated metadata (e.g. CICRA_project_metadata.csv)
 
@@ -237,12 +237,57 @@ The video below shows how these options are used to perform Correlation analysis
 ## Integrated ‘omics analysis
 Integrative analysis methods can provide better understanding and interpretation of the composite biological datasets and help elucidate the dynamics of the complex biological systems at a greater scale. ```CViewer```, implements three different techniques that have been proposed for a simultaneous analysis of multiple omics datasets, namely Simultaneous Component Analysis with rotation to COmmon and DIstinctive components (DISCO-SCA), Joint and Individual Variation Explained (JIVE) and Two-way Orthogonal Partial Least Squares (O2PLS). All of them are helpful for providing a “global” view on the biological system of interest by decomposing the variability of the composite omics datasets into a joint variability or common structure, that represents the mechanisms underlying all of the omics datasets under study, and individual variability or distinctive structure, that represents the biological mechanisms underlying a single omics dataset.
 
-### Data pre-processing and model selection
+**Step 1: Collecting the data**
+To illustrate how CViewer is useful for an integrated analysis of multi'omics datasets, we will use as previously, the WGS metagenomics profile of Crohn's Disease patients undergoing dietary treatment with Exclusive Enteral Nutrition and healthy individuals. In addition, as a second dataset, we will use a LC-MS metabolomics profile of 4,255 metabolites that were identified in 11 faecal extracts from eleven healthy children and to 54 faecal extracts from eleven children undergoing EEN for the treatment of active CD at timepoints before, during (15, 30, and 60 days), and after treatment (Alghamdi et al. 2018). To import these data into the software we will do as follows:
+
+Click the **Open** button right next to:
+* ```Table X:``` to import the first omics dataset ***X***, where rows describe samples and columns features/variables/species (e.g. CICRA_average_coverages.csv)
+* ```Table Y:``` to import the second omics dataset ***Y***, where rows describe samples and columns features/variables/species (e.g. CICRA_metabolomics.csv)
+* ```Normalise:``` normalisation can be performed individually for each dataset
+
+**Step 2: Data pre-processing**
 In an integrative or simultaneous analysis of multiple datasets, it is expected that the different blocks comprising the data are linked with a common set of entities. The tool supports an integrative analysis for two omics datasets that are linked by a common sample space, i.e. the measurements from the different omics data are obtained for the same set of samples (e.g. Crohn’s disease or Healthy individuals).
 
-Prior to analysis, it is useful that the data are pre-processed. As the data are generated from different omics technologies, they may be considerably different in size and describe features that are expressed in scales that are hard to compare, affecting this way the analysis results. For this reason, the software provides a number of pre-processing steps that can be applied to correct these differences. When the variables differ largely in scales (or abundance), one may consider centring the variables and/or scale them within each block to a sum of squares of one. In addition, weighting blocks together can be useful to avoid the effects of blocks having considerably different sizes.
+Prior to analysis, it is useful that the data are pre-processed. As the data are generated from different omics technologies, they may be considerably different in size and describe features that are expressed in scales that are hard to compare, affecting this way the analysis results. ```CViewer``` provides a number of pre-processing steps that can be applied to correct these differences. When the variables differ largely in scales (or abundance), one may consider ***centring*** the variables and/or ***scale*** them within each block to a sum of squares of one. In addition, ***weighting*** blocks together can be useful to avoid the effects of blocks having considerably different sizes.
 
-Before we choose any of the given methods to perform component analysis, one must first provide the number of components that the composite dataset of omics data is expected to contain, along with their characterization as either common or distinctive. This information is required from each integrative approach (i.e., DISCO-SCA, JIVE and O2PLS) and it is necessary so that the common and individual structures can be successfully identified and separated for each omics dataset. To estimate the number of these common and distinctive components, ```CViewer``` supports the Model Selection function. This step is optional, and if this information is known in advance then it can be directly used as an input to the next step of the analysis.
+**Step 3: Model selection**
+Before we choose any of the given methods to perform component analysis, one must first provide the number of components that the composite dataset of omics data is expected to contain, along with their characterization as either common or distinctive. This information is required from each integrative approach (i.e., DISCO-SCA, JIVE and O2PLS) and it is necessary so that the common and individual structures can be successfully identified and separated for each omics dataset. To estimate the optimal common and distinctive components, ```CViewer``` provides the Model Selection function. 
+
+A component is characterised as common, if the ratios between the explained variances (SSQ) of each data block and its estimation (SSQ_X/SSQ_(X_Y) and SSQ_Y/SSQ_(Y_X) ) is between 0.8 and 1.5. Subsequently, the process returns as the optimal number of common components the ones that were found to account for a sizeable amount of variance between the data blocks. Pre-processing of data should also be considered before performing the model selection analysis (see Step 1: Data pre-processing). For distinctive components, function allows the user to select the optimal number of distinctive components depending on the percentage of accumulated variance explained, the individual explained variance of each component, the absolute value of its variability or just a fixed number of components.
+
+========================= video
+
+**Step 4: Configuring the analysis**
+Integrated analysis of the given datasets can be performed by using either DISCO-SCA, JIVE or O2PLS. The individual data-blocks can be labelled for clarity and the number of common and distinctive components that were estimated using the Model Selection function can be provided as input to the integrative methods. Pre-processing of the data is supported from the tool and should be considered at this stage of the analysis (see Step 1: Data pre-processing). These features are provided through the following options:
+
+* ```Method:``` the method of the integrative analysis (DISCO-SCA, JIVE or O2PLS)
+* ```Names:``` the labels of the dasasets, one for each block of data, separated by comma (e.g. metagenome, metabolome)
+* ```Common:``` the number of common components
+* ```Distinctive:``` the number of distinctive components, one for each block of data, separated by comma
+
+**Step 5: Plotting the results**
+Once the above steps have been successfully performed, CViewer then provides a flexible framework for plotting the results. One can choose between common or individual results to be explored and can specify the 'omics dataset that he wants to inspect. The tool allows plotting of scores, loadings or both, for common and distinctive parts, while combined plots of both parts can also be produced. To do this, the **```Plots```** section provides the following options:
+
+* ```What:``` either "scores", "loadings" or "both"
+* ```Type:``` either "common", "individual" or "both"
+* ```Block:``` which block to plot, either "1" or "2"
+* ```Combined:``` whether to make a plot of two components from one block, or components from different blocks
+* ```Group by:``` the labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
+* ```Comps.:``` the ***```x```***  and ***```y```*** components to plot for the chosen type and block. If ```Combined=true```, it indicates the component to plot for the first block and the component for the second block to plot together.
+* ```Comps.:``` whether the labels for the dataset samples should be displayed on the plot
+* ```Panel:``` which panel (upper left/right and bottom left/right) should be used to plot the results
+
+========================= video
+
+Moreover, the loading contributions of each dataset to the common structure can be examined across the number of the available common components, where loadings weights can be sorted according to importance based on absolute values. This is done by adjusting the following options:
+* ```Contrib.:``` whether the loading contributions should be displayed
+* ```Sort:``` whether the loading contributions should be sorted according to importance based on absolute values
+* ```Comp.:``` the component of the common structure to plot
+* ```Top:``` the number of the first ***```x```*** variables (e.g. species, metabolites) to plot
+* ```Panel:``` which panel (upper left/right and bottom left/right) should be used to plot the results
+
+========================= video
+
 
 ![Multiomics 2020-01-12 23_14_50](https://user-images.githubusercontent.com/30604050/72227185-65a40700-3591-11ea-812e-83802d663581.gif)
 
