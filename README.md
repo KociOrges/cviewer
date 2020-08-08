@@ -268,8 +268,7 @@ A component is characterised as common, if the ratios between the explained vari
 * ```PC components:``` fixed number of components for ```fixed.num```
 
 See video below for more details:
-[![animation](https://user-images.githubusercontent.com/30604050/89131615-03e3c400-d506-11ea-8d08-b388771c1c09.png)](https://www.youtube.com/watch?v=c_HTw0MlYj4)
-
+[![animation](https://user-images.githubusercontent.com/30604050/89717262-852ad300-d9ac-11ea-9185-873a785bbd5e.png)](https://www.youtube.com/watch?v=c_HTw0MlYj4)
 
 **Step 4: Configuring the analysis**
 
@@ -295,7 +294,7 @@ Once the above steps have been successfully performed, CViewer then provides a f
 * ```Panel:``` which panel (upper left/right and bottom left/right) should be used to plot the results
 
 This is illustrated in the following video:
-[![animation](https://user-images.githubusercontent.com/30604050/88488454-151c5600-cf85-11ea-8865-c9f32f40e30b.png)](https://www.youtube.com/watch?v=H2HApGkVZnM)
+[![animation](https://user-images.githubusercontent.com/30604050/89717265-8956f080-d9ac-11ea-91cd-6f4650a75f57.png)](https://www.youtube.com/watch?v=H2HApGkVZnM)
 
 Moreover, the loading contributions of each dataset to the common structure can be examined across the number of the available common components, where loadings weights can be sorted according to importance based on absolute values. This is done by adjusting the following options:
 * ```Contrib.:``` whether the loading contributions should be displayed
@@ -305,7 +304,7 @@ Moreover, the loading contributions of each dataset to the common structure can 
 * ```Panel:``` which panel (upper left/right and bottom left/right) should be used to plot the results
 
 See animation below:
-[![animation](https://user-images.githubusercontent.com/30604050/88488271-f8cbe980-cf83-11ea-87f5-02cbfba904d9.png)](https://www.youtube.com/watch?v=AL4s6EFxCY4)
+[![animation](https://user-images.githubusercontent.com/30604050/89717267-8b20b400-d9ac-11ea-9420-1351763eaf53.png)](https://www.youtube.com/watch?v=AL4s6EFxCY4)
 
 
 ## Charts
