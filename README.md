@@ -1,5 +1,3 @@
-<img width="250" height="250" alt="Screenshot 2020-08-09 at 21 13 39" src="https://user-images.githubusercontent.com/30604050/89740940-4583ea00-da85-11ea-9b7e-d36b5537d2ab.png">
-
 <img width="250" height="250" alt="Screenshot 2020-08-09 at 21 13 39" src="https://user-images.githubusercontent.com/30604050/89741516-dceb3c00-da89-11ea-8d9b-479da82f1215.png">
 
 ### A Java-based statistical framework for integration of shotgun metagenomics with other omics technologies
