@@ -1,4 +1,4 @@
-<img width="250" height="250" alt="Screenshot 2020-08-09 at 21 13 39" src="https://user-images.githubusercontent.com/30604050/89741516-dceb3c00-da89-11ea-8d9b-479da82f1215.png">
+<img width="250" height="250" alt="https://user-images.githubusercontent.com/30604050/89745214-4aa76000-daaa-11ea-9c52-2f7e6ded4ae3.png">
 
 ### A Java-based statistical framework for integration of shotgun metagenomics with other omics technologies
 #### Orges Koci, Richard K. Russell, Konstantinos Gerasimidis, \*Umer Zeeshan Ijaz (\*Correspondence: Umer.Ijaz@glasgow.ac.uk)
