@@ -24,8 +24,7 @@ public class ContigsCOGsDB {
 			    long startTime = System.currentTimeMillis();
 				try {
 					try {
-						//COGsFile = new FileWriter(dir+"/Output/PROKKA_COGsDB.tsv"); //normally results should go to /Output folder
-						COGsFile = new FileWriter(dir+"/PROKKA_COGsDB.tsv"); //due to memory shortage though will store them to hard drive
+						COGsFile = new FileWriter(dir+"/Output/PROKKA_COGsDB.tsv"); //normally results should go to Output/ folder
 						COGsFile.append("CDS_ID\tCOG\tName\tStart\tEnd\n");
 						
 						rpsblastFile = new FileReader(new File(args[0]));
@@ -64,7 +63,7 @@ public class ContigsCOGsDB {
 						        dis.close();
 						        is.close();
 					        } catch (IOException ex) {
-					        	//System.err.println("File exception");
+					        	System.err.println("File exception");
 					        }
 						}
 					} finally {
