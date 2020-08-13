@@ -8,9 +8,9 @@
 ```
 
 ## Introduction to CViewer
-The past few years have seen an increased utility of shotgun metagenomics for microbial community surveys over traditional amplicon sequencing. This is made possible by the technological advancement in methods development that enables us now to assemble short sequence reads into longer contiguous regions that can be binned together to identify species they are part of, e.g., through CONCOCT [[1]](#1). The advantage of shotgun metagenomics is that  coding regions of these contigs can further be annotated against public databases to give an assessment of the functional diversity. With integrated solutions gaining importance by complementing metagenomics with other meta’omics technologies (e.g., metabolomics), there is a need to have a single platform to consolidate all these realisations on the same sample space. Thus, we have developed ```CViewer``` which aims to integrate all levels of gene products, mRNA, protein, metabolites for microbial communities and allows exploration of their response to environmental factors through multivariate statistical analysis. 
+The past few years have seen an increased utility of shotgun metagenomics for microbial community surveys over traditional amplicon sequencing. This is made possible by the technological advancement in methods development that enables us now to assemble short sequence reads into longer contiguous regions that can be binned together to identify species they are part of, e.g., through CONCOCT[[1]](#1). The advantage of shotgun metagenomics is that  coding regions of these contigs can further be annotated against public databases to give an assessment of the functional diversity. With integrated solutions gaining importance by complementing metagenomics with other meta’omics technologies (e.g., metabolomics), there is a need to have a single platform to consolidate all these realisations on the same sample space. Thus, we have developed ```CViewer``` which aims to integrate all levels of gene products, mRNA, protein, metabolites for microbial communities and allows exploration of their response to environmental factors through multivariate statistical analysis. 
  
-The current version of ```CViewer``` is a highly interactive Java application tailored to the needs of non-expert users. It integrates with the output from CONCOCT as well as major third party taxonomic (KRAKEN [[2]](#2) etc.) and annotation software (PROKKA [[3]](#3)). The theoretical underpinning of numerical ecology allows exploratory as well as hypothesis driven analyses, emphasizing on functional traits of microbial communities and phylogenetic‐based approaches to community assembly, particularly abiotic filtering. 
+The current version of ```CViewer``` is a highly interactive Java application tailored to the needs of non-expert users. It integrates with the output from CONCOCT as well as major third party taxonomic (KRAKEN[[2]](#2) etc.) and annotation software (PROKKA[[3]](#3)). The theoretical underpinning of numerical ecology allows exploratory as well as hypothesis driven analyses, emphasizing on functional traits of microbial communities and phylogenetic‐based approaches to community assembly, particularly abiotic filtering. 
 
 
 ## Installation & usage
@@ -141,13 +141,13 @@ Once we have completed the above step, the complete collection of molecular path
 [![animation](https://user-images.githubusercontent.com/30604050/88488454-151c5600-cf85-11ea-8865-c9f32f40e30b.png)](https://www.youtube.com/watch?v=21Ky1zD2mwU&feature=youtu.be)
 
 ## Phylogenetic diversity
-Community phylogenetic a-diversity analysis is also possible with ```CViewer``` software. We have considered two  metrics which have been been suggested by Webb [[4]](#4) and proved useful for phylogenetic structure analysis, as a measure of phylogenetic clustering or overdispersion, namely the _Net Relatedness Index_ (NRI) and _Nearest Taxon Index_ (NTI). 
+Community phylogenetic a-diversity analysis is also possible with ```CViewer``` software. We have considered two  metrics which have been been suggested by Webb[[4]](#4) and proved useful for phylogenetic structure analysis, as a measure of phylogenetic clustering or overdispersion, namely the _Net Relatedness Index_ (NRI) and _Nearest Taxon Index_ (NTI). 
 
 **Step 1: Extracting a gene from the metagenomics contigs**
 
-Before extracting the gene data, we need to **make sure that we have first imported the output from CONCOCT (PCA file, coverage and clustering files; see Section: Visualising the metagenomics contigs) and PROKKA (GenBank file) pipelines into the software**. Then, in order to perform phylogenetic analysis with CViewer, one first needs to generate a phylogenetic tree. To do this, the system provides a set of essential genes [[5]](#5) that can be extracted from the contigs for creating a phylogenetic tree with support for manual selection as well. After the gene has been specified, the gene sequences are extracted for each cluster of the WGS dataset and saved in a ```.fasta``` file in the *Output/* folder, along with the average coverages of the clusters across the samples of the dataset. 
+Before extracting the gene data, we need to **make sure that we have first imported the output from CONCOCT (PCA file, coverage and clustering files; see Section: Visualising the metagenomics contigs) and PROKKA (GenBank file) pipelines into the software**. Then, in order to perform phylogenetic analysis with CViewer, one first needs to generate a phylogenetic tree. To do this, the system provides a set of essential genes[[5]](#5) that can be extracted from the contigs for creating a phylogenetic tree with support for manual selection as well. After the gene has been specified, the gene sequences are extracted for each cluster of the WGS dataset and saved in a ```.fasta``` file in the *Output/* folder, along with the average coverages of the clusters across the samples of the dataset. 
 
-To illustrate the process described right above we will use the output from CONCOCT that was produced from the metagenomics profiling of 144 feacal extracts collected from Crohn's Disease (CD) patients undergoing dietary treatment with Exclusive Enteral Nutrition (EEN), Healthy Crohn's disease relatives (CDR), Healthy children (H) and Healthy adults (HC_A) [[6]](#6), [[7]](#7). Metagenomics reads were assembled into 636,062 contigs which were subsequently grouped into 977 genomic bins through CONCOCT. The following video demonstrates how the gene data is extracted from the above dataset using CViewer. Please note that depending on the dataset size this process might require a few minutes to complete (approx. 12mins for a MacBook Pro with a 2.6 GHz Intel Core i5 processor):
+To illustrate the process described right above we will use the output from CONCOCT that was produced from the metagenomics profiling of 144 feacal extracts collected from Crohn's Disease (CD) patients undergoing dietary treatment with Exclusive Enteral Nutrition (EEN), Healthy Crohn's disease relatives (CDR), Healthy children (H) and Healthy adults (HC_A)[[6]](#6), [[7]](#7). Metagenomics reads were assembled into 636,062 contigs which were subsequently grouped into 977 genomic bins through CONCOCT. The following video demonstrates how the gene data is extracted from the above dataset using CViewer. Please note that depending on the dataset size this process might require a few minutes to complete (approx. 12mins for a MacBook Pro with a 2.6 GHz Intel Core i5 processor):
 
 [![animation](https://user-images.githubusercontent.com/30604050/89720701-1a3dc400-d9cd-11ea-87d0-fe84a284bd43.png)](https://www.youtube.com/watch?v=xD9wu2yXEOw)
 
@@ -309,7 +309,7 @@ Integrative analysis methods can provide better understanding and interpretation
 
 **Step 1: Collecting the data**
 
-To illustrate how CViewer is useful for an integrated analysis of multi'omics datasets, we will use as previously, the WGS metagenomics profile of Crohn's Disease patients undergoing dietary treatment with Exclusive Enteral Nutrition and healthy individuals. In addition, as a second dataset, we will use a LC-MS metabolomics profile of 4,255 metabolites that were identified in 11 faecal extracts from eleven healthy children and to 54 faecal extracts from eleven children undergoing EEN for the treatment of active CD at timepoints before, during (15, 30, and 60 days), and after treatment (Alghamdi et al. 2018). To import these data into the software we will do as follows:
+To illustrate how CViewer is useful for an integrated analysis of multi'omics datasets, we will use as previously, the WGS metagenomics profile of Crohn's Disease patients undergoing dietary treatment with Exclusive Enteral Nutrition and healthy individuals[[6]](#6), [[7]](#7). In addition, as a second dataset, we will use a LC-MS metabolomics profile of 4,255 metabolites that were identified in 11 faecal extracts from eleven healthy children and to 54 faecal extracts from eleven children undergoing EEN for the treatment of active CD at timepoints before, during (15, 30, and 60 days), and after treatment[[12]](#12). To import these data into the software we will do as follows:
 
 Click the **Open** button right next to:
 * ```Table X:``` to import the first omics dataset ***X***, where rows describe samples and columns features/variables (e.g. CICRA_average_coverages.csv)
@@ -388,32 +388,46 @@ This is demonstrated in the following video:
 <a id="1">[1]</a>
 Alneberg J, Bjarnason BS, De Bruijn I, et al. Binning metagenomic contigs by coverage and composition. Nat Methods. 2014;11(11):1144-1146. doi:10.1038/nmeth.3103
 <br>
+<br>
 <a id="2">[2]</a>
 Wood DE, Salzberg SL. Kraken: Ultrafast metagenomic sequence classification using exact alignments. Genome Biol. 2014;15(3). doi:10.1186/gb-2014-15-3-r46
+<br>
 <br>
 <a id="3">[3]</a>
 Seemann T. Prokka: rapid prokaryotic genome annotation. Bioinformatics. 2014;30(14):2068-2069. doi:10.1093/bioinformatics/btu153
 <br>
+<br>
 <a id="4">[4]</a> 
 Webb CO. Exploring the phylogenetic structure of ecological communities: An example for rain forest trees. Am Nat. 2000;156(2):145-155. doi:10.1086/303378
+<br>
 <br>
 <a id="5">[5]</a> 
 Campbell JH, O’Donoghue P, Campbell AG, et al. UGA is an additional glycine codon in uncultured SR1 bacteria from the human microbiota. Proc Natl Acad Sci U S A. 2013;110(14):5540-5545. doi:10.1073/pnas.1303090110
 <br>
+<br>
 <a id="6">[6]</a> 
 Quince C, Ijaz UZ, Loman N, et al. Extensive modulation of the fecal metagenome in children with Crohn’s disease during exclusive enteral nutrition. Am J Gastroenterol. 2015;110(12):1718-1729. doi:10.1038/ajg.2015.357
+<br>
 <br>
 <a id="7">[7]</a> 
 Gerasimidis K, Nikolaou CK, Edwards CA, McGrogan P. Serial fecal calprotectin changes in children with Crohn’s disease on treatment with exclusive enteral nutrition: associations with disease activity, treatment response, and prediction of a clinical relapse. J Clin Gastroenterol. 2011;45(3):234-239. doi:10.1097/MCG.0b013e3181f39af5
 <br>
+<br>
 <a id="8">[8]</a> 
 Wold H. Soft Modelling by Latent Variables: The Non-Linear Iterative Partial Least Squares (NIPALS) Approach. J Appl Probab. 1975;12(S1):117-142. doi:10.1017/s0021900200047604
+<br>
 <br>
 <a id="9">[9]</a> 
 Schouteden M, Van Deun K, Wilderjans TF, Van Mechelen I. DISCO-SCA. Behav Res Methods. 2014;46(2):576-587. doi:10.3758/s13428-013-0374-6
 <br>
+<br>
 <a id="10">[10]</a> 
 Lock EF, Hoadley KA, Marron JS, Nobel AB. Joint and individual variation explained (JIVE) for integrated analysis of multiple data types. Ann Appl Stat. 2013;7(1):523-542. doi:10.1214/12-AOAS597
 <br>
+<br>
 <a id="11">[11]</a> 
 Trygg J, Wold S. O2-PLS, a two-block (X-Y) latent variable regression (LVR) method with an integral OSC filter. In: Journal of Chemometrics. Vol 17. ; 2003:53- 64. doi:10.1002/cem.775
+<br>
+<br>
+<a id="12">[12]</a> 
+Alghamdi A, Gerasimidis K, Blackburn G, et al. Untargeted metabolomics of extracts from faecal samples demonstrates distinct differences between paediatric crohn’s disease patients and healthy controls but no significant changes resulting from exclusive enteral nutrition treatment. Metabolites. 2018;8(4). doi:10.3390/metabo8040082
