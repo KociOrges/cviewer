@@ -40,9 +40,9 @@ Once that is done, you can start using CViewer. This can be done by just double-
 **Step 1: Collecting the required data**
 
 For this tutorial, you will need the files listed below:
-* ```PCA_transformed_data_gt1000.csv:``` The *N x D* CSV file that contains the *D* PCA components for each contig 
-* ```concoct_inputtable.csv:``` The *N x S* TSV file that contains the information for the coverage values for the *S* samples of the dataset
-* ```clustering_gt1000.csv:``` The *N x 1* CSV file that gives the labelling of which cluster each contig belongs to
+* ```PCA_transformed_data_gt1000.csv:``` the *N x D* CSV file that contains the *D* PCA components for each contig 
+* ```concoct_inputtable.csv:``` the *N x S* TSV file that contains the information for the coverage values for the *S* samples of the dataset
+* ```clustering_gt1000.csv:``` the *N x 1* CSV file that gives the labelling of which cluster each contig belongs to
 
 In addition, we will need the file with the taxonomic labels for the clusters of contigs which, in this example, is obtained from Kraken software.
 
@@ -85,12 +85,29 @@ One can explore the annotated genomic features for the contigs of the dataset by
 
 **Step 1: Collecting the data**
 
-* ```PROKKA.gbk:``` The file that contains all the annotation tracks for the *N* contigs of the dataset, obtained from PROKKA software
-* ```COGsDB.tsv:``` The file that contains the information with the COGs for the *N* contigs of the dataset, obtained from the scripts provided with CViewer and by using the NBCI's CDD database
+For this part of the analysis, you will need the following files:
+* ```PROKKA_XXXXXXX.gbk:``` the file that contains all the annotation tracks for the *N* contigs of the dataset, obtained from PROKKA software (e.g. example_datasets/PROKKA.gbk)
+* ```PROKKA_XXXXXXX.faa:``` the file describing all of the predicted protein coding sequences for the *N* contigs of the dataset (e.g. example_datasets/PROKKA.faa)
+
+To obtain the COGs, we will first use the RPS-BLAST to COG annotate the protein sequences using the script RPSBLAST.sh that is provided with the CONCOCT software.A complete example for doing this is given [here](https://concoct.readthedocs.io/en/0.3.3/complete_example.html). The blast output will be a PROKKA_XXXXXXX.out file which you can then give us an input to the script _ContigsCOGsDB.java_ in order to generate COG assignments for the protein sequences. Assuming that you are in the parent directory (CViewer), you can do this as follows:
+```
+$ java scripts/ContigsCOGsDB PROKKA_XXXXXXX.out
+```
+The above command will generate a TSV file of COGs named COGsDB.tsv, and should look like this:
+```
+$ head COGsDB.tsv
+CDS_ID	COG	Name	Start	End
+PROKKA_00008	COG0283	Cytidylate kinase [Nucleotide transport and metabolism]	1	189
+PROKKA_00009	COG1302	Uncharacterized conserved protein YloU, alkaline shock protein (Asp23) family [Function unknown]	54	162
+PROKKA_00010	COG1063	Threonine dehydrogenase or related Zn-dependent dehydrogenase [Amino acid transport and metabolism, General function prediction only]	3	339
+PROKKA_00010	COG1064	D-arabinose 1-dehydrogenase, Zn-dependent alcohol dehydrogenase family [Carbohydrate transport and metabolism]	55	340
+PROKKA_00011	COG1211	2-C-methyl-D-erythritol 4-phosphate cytidylyltransferase [Lipid transport and metabolism]	1	235
+PROKKA_00011	COG0746	Molybdopterin-guanine dinucleotide biosynthesis protein A [Coenzyme transport and metabolism]	1	166
+```
 
 **Step 2: Importing the data into CViewer**
 
-In a way similar to the one described in the previous section, click the **Open** button next to
+Once you have completed the above steps, then in a way similar to the one described in the previous section, click the **Open** button next to
 * ```GenBank:``` to import the GenBank file (e.g. PROKKA.gbk)
 * ```COGs:``` to import the file with all the identified COGs (e.g. COGsDB.tsv)
 
