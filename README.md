@@ -95,7 +95,7 @@ $ java scripts/ContigsCOGsDB PROKKA_XXXXXXX.out
 ```
 The above command will generate a TSV file of COGs named COGsDB.tsv, and should look like this:
 ```
-$ head COGsDB.tsv
+$ head PROKKA_COGsDB.tsv
 CDS_ID	COG	Name	Start	End
 PROKKA_00008	COG0283	Cytidylate kinase [Nucleotide transport and metabolism]	1	189
 PROKKA_00009	COG1302	Uncharacterized conserved protein YloU, alkaline shock protein (Asp23) family [Function unknown]	54	162
@@ -109,7 +109,7 @@ PROKKA_00011	COG0746	Molybdopterin-guanine dinucleotide biosynthesis protein A [
 
 Once you have completed the above steps, then in a way similar to the one described in the previous section, click the **Open** button next to
 * ```GenBank:``` to import the GenBank file (e.g. PROKKA.gbk)
-* ```COGs:``` to import the file with all the identified COGs (e.g. COGsDB.tsv)
+* ```COGs:``` to import the file with all the identified COGs (e.g. PROKKA_COGsDB.tsv)
 
 **Step 3: Extracting the annotation tracks**
 
