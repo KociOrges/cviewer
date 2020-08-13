@@ -396,17 +396,24 @@ Seemann T. Prokka: rapid prokaryotic genome annotation. Bioinformatics. 2014;30(
 <br>
 <a id="4">[4]</a> 
 Webb CO. Exploring the phylogenetic structure of ecological communities: An example for rain forest trees. Am Nat. 2000;156(2):145-155. doi:10.1086/303378
+<br>
 <a id="5">[5]</a> 
 Campbell JH, O’Donoghue P, Campbell AG, et al. UGA is an additional glycine codon in uncultured SR1 bacteria from the human microbiota. Proc Natl Acad Sci U S A. 2013;110(14):5540-5545. doi:10.1073/pnas.1303090110
+<br>
 <a id="6">[6]</a> 
 Quince C, Ijaz UZ, Loman N, et al. Extensive modulation of the fecal metagenome in children with Crohn’s disease during exclusive enteral nutrition. Am J Gastroenterol. 2015;110(12):1718-1729. doi:10.1038/ajg.2015.357
+<br>
 <a id="7">[7]</a> 
 Gerasimidis K, Nikolaou CK, Edwards CA, McGrogan P. Serial fecal calprotectin changes in children with Crohn’s disease on treatment with exclusive enteral nutrition: associations with disease activity, treatment response, and prediction of a clinical relapse. J Clin Gastroenterol. 2011;45(3):234-239. doi:10.1097/MCG.0b013e3181f39af5
+<br>
 <a id="8">[8]</a> 
 Wold H. Soft Modelling by Latent Variables: The Non-Linear Iterative Partial Least Squares (NIPALS) Approach. J Appl Probab. 1975;12(S1):117-142. doi:10.1017/s0021900200047604
+<br>
 <a id="9">[9]</a> 
 Schouteden M, Van Deun K, Wilderjans TF, Van Mechelen I. DISCO-SCA. Behav Res Methods. 2014;46(2):576-587. doi:10.3758/s13428-013-0374-6
+<br>
 <a id="10">[10]</a> 
 Lock EF, Hoadley KA, Marron JS, Nobel AB. Joint and individual variation explained (JIVE) for integrated analysis of multiple data types. Ann Appl Stat. 2013;7(1):523-542. doi:10.1214/12-AOAS597
+<br>
 <a id="11">[11]</a> 
 Trygg J, Wold S. O2-PLS, a two-block (X-Y) latent variable regression (LVR) method with an integral OSC filter. In: Journal of Chemometrics. Vol 17. ; 2003:53- 64. doi:10.1002/cem.775
