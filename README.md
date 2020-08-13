@@ -385,15 +385,15 @@ This is demonstrated in the following video:
 
 
 ## References
-<a id="1">[1]
+<a id="1">[1]</a>
 Alneberg J, Bjarnason BS, De Bruijn I, et al. Binning metagenomic contigs by coverage and composition. Nat Methods. 2014;11(11):1144-1146. doi:10.1038/nmeth.3103
-</a> 
-<a id="2">[2]
+<br>
+<a id="2">[2]</a>
 Wood DE, Salzberg SL. Kraken: Ultrafast metagenomic sequence classification using exact alignments. Genome Biol. 2014;15(3). doi:10.1186/gb-2014-15-3-r46
-</a> 
-<a id="3">[3]
+<br>
+<a id="3">[3]</a>
 Seemann T. Prokka: rapid prokaryotic genome annotation. Bioinformatics. 2014;30(14):2068-2069. doi:10.1093/bioinformatics/btu153
-</a> 
+<br>
 <a id="4">[4]</a> 
 Webb CO. Exploring the phylogenetic structure of ecological communities: An example for rain forest trees. Am Nat. 2000;156(2):145-155. doi:10.1086/303378
 <a id="5">[5]</a> 
