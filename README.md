@@ -89,7 +89,7 @@ For this part of the analysis, you will need the following files:
 * ```PROKKA_XXXXXXX.gbk:``` the file that contains all the annotation tracks for the *N* contigs of the dataset, obtained from PROKKA software (e.g. example_datasets/PROKKA.gbk)
 * ```PROKKA_XXXXXXX.faa:``` the file describing all of the predicted protein coding sequences for the *N* contigs of the dataset (e.g. example_datasets/PROKKA.faa)
 
-To obtain the COGs, we will first use the [RPS-BLAST](https://warwick.ac.uk/fac/sci/moac/people/students/peter_cock/python/rpsblast/) to COG annotate the protein sequences using the script RPSBLAST.sh that is provided with the CONCOCT software.A complete example for doing this is given [here](https://concoct.readthedocs.io/en/0.3.3/complete_example.html). The blast output will be a PROKKA_XXXXXXX.out file which you can then give us an input to the script _ContigsCOGsDB.java_ in order to generate COG assignments for the protein sequences. Assuming that you are in the parent directory (CViewer), you can do this as follows:
+To obtain the COGs, we will first use the [RPS-BLAST](https://warwick.ac.uk/fac/sci/moac/people/students/peter_cock/python/rpsblast/) to COG annotate the protein sequences using the script RPSBLAST.sh that is provided with the CONCOCT software.A complete example for doing this is given [here](https://concoct.readthedocs.io/en/0.3.3/complete_example.html). The blast output will be a _PROKKA_XXXXXXX.out_ file which you can then give us an input to the script _ContigsCOGsDB.java_ in order to generate COG assignments for the protein sequences. Assuming that you are in the parent directory (CViewer), you can do this as follows:
 ```
 $ java scripts/ContigsCOGsDB PROKKA_XXXXXXX.out
 ```
@@ -385,12 +385,15 @@ This is demonstrated in the following video:
 
 
 ## References
-<a id="1">[1]</a> 
+<a id="1">[1]
 Alneberg J, Bjarnason BS, De Bruijn I, et al. Binning metagenomic contigs by coverage and composition. Nat Methods. 2014;11(11):1144-1146. doi:10.1038/nmeth.3103
-<a id="2">[2]</a> 
+</a> 
+<a id="2">[2]
 Wood DE, Salzberg SL. Kraken: Ultrafast metagenomic sequence classification using exact alignments. Genome Biol. 2014;15(3). doi:10.1186/gb-2014-15-3-r46
-<a id="3">[3]</a> 
+</a> 
+<a id="3">[3]
 Seemann T. Prokka: rapid prokaryotic genome annotation. Bioinformatics. 2014;30(14):2068-2069. doi:10.1093/bioinformatics/btu153
+</a> 
 <a id="4">[4]</a> 
 Webb CO. Exploring the phylogenetic structure of ecological communities: An example for rain forest trees. Am Nat. 2000;156(2):145-155. doi:10.1086/303378
 <a id="5">[5]</a> 
