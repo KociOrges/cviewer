@@ -93,7 +93,7 @@ To obtain the COGs, we will first use the RPS-BLAST to COG annotate the protein 
 ```
 $ java scripts/ContigsCOGsDB PROKKA_XXXXXXX.out
 ```
-The above command will generate a TSV file of COGs named COGsDB.tsv, and should look like this:
+The above command will generate a TSV file of COGs named PROKKA_COGsDB.tsv placed in the _Output/_ folder, and should look like this:
 ```
 $ head PROKKA_COGsDB.tsv
 CDS_ID	COG	Name	Start	End
