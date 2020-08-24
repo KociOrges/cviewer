@@ -2,7 +2,7 @@
 
 ### A Java-based statistical framework for integration of shotgun metagenomics with other omics technologies
 
-#### CViewer is developed by Orges Koci as part of his PhD under the supervision of Dr \*Umer Zeeshan Ijaz (\*Correspondence: Umer.Ijaz@glasgow.ac.uk --link to website) with critical feedback by Profs Konstantinos Gerasimidis and Richard Russell
+#### CViewer is developed by Orges Koci as part of his PhD under the supervision of Dr Umer Zeeshan Ijaz (http://userweb.eng.gla.ac.uk/umer.ijaz/) with critical feedback by Profs Konstantinos Gerasimidis and Richard Russell
 
 ```diff
 - Please note that the repository for this project is still under construction as well as the accompanying manuscript is in preparation!
