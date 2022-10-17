@@ -1,6 +1,7 @@
 <img width="350" height="190" alt="Screenshot 2020-08-10 at 11 30 22" src="https://user-images.githubusercontent.com/30604050/90171121-eed62300-dd98-11ea-9ef2-0336eed842b2.png">
 
-### A Java-based statistical framework for integration of shotgun metagenomics with other omics technologies
+### A Java-based statistical framework for integration of shotgun meta-genomics with other omics datasets
+
 
 #### CViewer is developed by Orges Koci as part of his PhD under the supervision of Dr Umer Zeeshan Ijaz (http://userweb.eng.gla.ac.uk/umer.ijaz/) in his Environmental Omics Lab ([Water & Environment Group](https://www.gla.ac.uk/schools/engineering/research/divisions/i_e/researchthemes/w_e/)) and jointly with the [BINGO Group](https://www.gla.ac.uk/schools/medicine/research/humannutrition/thebingogroup/) with the critical feedbacks by Profs Konstantinos Gerasimidis and Richard Russell who served in his thesis committee. 
 
@@ -13,6 +14,10 @@ The past few years have seen an increased utility of shotgun metagenomics for mi
  
 The current version of ```CViewer``` is a highly interactive Java application tailored to the needs of non-expert users. It integrates with the output from CONCOCT as well as major third party taxonomic (KRAKEN[[2]](#2) etc.) and annotation software (PROKKA[[3]](#3)). The theoretical underpinning of numerical ecology allows exploratory as well as hypothesis driven analyses, emphasizing on functional traits of microbial communities and phylogenetic‐based approaches to community assembly, particularly abiotic filtering. 
 
+## Dependencies
+- ```Operating system:``` Platform independent
+- ```Requirements:``` Java Platform Standard Edition 1.8.0 or later
+- ```License:``` MIT
 
 ## Installation & usage
 **Step 1: Cloning the repository**
