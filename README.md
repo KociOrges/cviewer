@@ -5,9 +5,8 @@
 
 #### CViewer is developed by Orges Koci as part of his PhD under the supervision of Dr Umer Zeeshan Ijaz (http://userweb.eng.gla.ac.uk/umer.ijaz/) in his Environmental Omics Lab ([Water & Environment Group](https://www.gla.ac.uk/schools/engineering/research/divisions/i_e/researchthemes/w_e/)) and jointly with the [BINGO Group](https://www.gla.ac.uk/schools/medicine/research/humannutrition/thebingogroup/) with the critical feedbacks by Profs Konstantinos Gerasimidis and Richard Russell who served in his thesis committee. 
 
-```
-- A preprint of this work is now available on bioRxiv: https://www.biorxiv.org/content/10.1101/2023.06.07.544017v1
-```
+## Publication
+- A preprint of this work is now available on bioRxiv: [https://www.biorxiv.org/content/10.1101/2023.06.07.544017v1](https://www.biorxiv.org/content/10.1101/2023.06.07.544017v1)
 
 ## Introduction to CViewer
 The past few years have seen an increased utility of shotgun metagenomics for microbial community surveys over traditional amplicon sequencing. This is made possible by the technological advancement in methods development that enables us now to assemble short sequence reads into longer contiguous regions that can be binned together to identify species they are part of, e.g., through CONCOCT[[1]](#1). The advantage of shotgun metagenomics is that  coding regions of these contigs can further be annotated against public databases to give an assessment of the functional diversity. With integrated solutions gaining importance by complementing metagenomics with other meta’omics technologies (e.g., metabolomics), there is a need to have a single platform to consolidate all these realisations on the same sample space. Thus, we have developed ```CViewer``` which aims to integrate all levels of gene products, mRNA, protein, metabolites for microbial communities and allows exploration of their response to environmental factors through multivariate statistical analysis. 
