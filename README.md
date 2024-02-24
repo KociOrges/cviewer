@@ -297,18 +297,31 @@ This is demonstrated in the video below. We will assume again that you have alre
 
 
 ## Differential abundance
-Differential abundance analysis can be valuable when investigating for features (e.g. species/metabolic pathways) that discriminate between multiple treatment groups. ```CViewer``` implements the Kruskal-Wallis H statistic for differential analysis and offers a Benjamini-Hochberg correction for multiple comparisons. In addition, pairwise significances between the groups can be explored with the Dunn’s post hoc procedure. The hypotheses to be tested can be uploaded in the software in the form of a .csv file containing hypotheses as headers along with additional metadata on the samples describing the treatment groups. One can then easily navigate through the list of available hypotheses and choose the one to be tested with the Kruskal-Wallis statistic. Finally, significant features are visualised in the form of box plots with appropriate colouring to indicate the treatment groups along with the P-values to report significance. The test provides the following options:
+
+### 1. Kruskal-Wallis H
+Differential abundance analysis can be valuable when investigating for features (e.g. species/metabolic pathways) that discriminate between multiple treatment groups. ```CViewer``` utilizes the Kruskal-Wallis H statistic for this analysis. To enhance the credibility of the analysis amidst the challenge of multiple comparisons, CViewer incorporates the *Benjamini-Hochberg* correction method. This adjustment is crucial as it controls the *false discovery rate (FDR)*, which is the expected proportion of incorrect rejections among all rejected hypotheses. In addition, pairwise significances between the groups can be explored with the Dunn’s post hoc procedure. The hypotheses to be tested can be uploaded in the software in the form of a .csv file containing hypotheses as headers along with additional metadata on the samples describing the treatment groups. One can then easily navigate through the list of available hypotheses and choose the one to be tested with the Kruskal-Wallis statistic. Finally, significant features are visualised in the form of box plots with appropriate colouring to indicate the treatment groups along with the P-values to report significance. The test provides the following options:
 
 * ```P-Value:``` the P-value cut-off of the test
 * ```Objects:``` how many objects or groups we would like to viusalise in the plot from the total number of the returned features that were found significant 
 * ```Post-hoc test:``` whether a post-hoc test should be performed with the Kruskal-Wallis test (based on Dunn’s post hoc procedure)
-* ```Adjust P-Values:``` whether P-Values should be adjusted to account for multiple comparisons (based on Benjamini-Hochberg's method)
+* ```Adjust P-Values:``` whether P-Values should be adjusted to account for multiple comparisons. Enables the adjustment of P-Values using the Benjamini-Hochberg correction to account for the risk of false discoveries due to multiple comparisons.
 * ```Group by:``` the labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
 * ```Panel:``` which panel (upper left/right and bottom left/right) should be used for plotting the results
 
 The example below illustrates how the above options are used in CViewer in order to perform differential abundance analysis. We will assume that you have already imported the required data, i.e. the abundance table and the metadata. Now, let's say that we are interested in exploring, e.g., whether any species (CONCOCT clusters) in the gut microbiome of CD patients changes significantly in abundance during the EEN treamtent, and how this differs from the healthy baseline:
 
 [![animation](https://user-images.githubusercontent.com/30604050/89682931-75998480-d8ef-11ea-83c8-9548bcccf567.png)](https://www.youtube.com/watch?v=dTCAzbKhezg)
+
+### 2. Friedman Test
+CViewer's analytical capabilities have been broadened with the implementation of the Friedman test, a non-parametric statistical test for detecting differences in treatments across multiple test attempts. This enhancement specifically addresses the complexities associated with repeated measures data, where the same subjects are exposed to different conditions over time or space. The test provides the following key features and implementation:
+
+* ```Post-hoc test:``` To delve deeper into the specific treatment pairs that drive the observed differences, CViewer offers pairwise comparisons using Conover's F. This method adjusts for multiple comparisons and provides detailed insights into which treatments significantly differ from each other, enhancing the interpretability of the Friedman test results.
+
+* ```Block by:``` In addition to the "Group by" functionality, which organizes samples based on treatment groups, the "Block by" option allows users to block the samples. This feature is essential for the Friedman test, enabling the analysis to account for the blocking factor that represents the subjects across which measurements are repeated. Blocking helps control for variability between subjects, ensuring that the differences detected are attributable to the treatments rather than inherent subject differences.
+
+* ```Data Filtering and Information Message:``` CViewer performs internal data filtering to ensure the applicability of the Friedman test. This process includes checks for missing values and the appropriateness of the data structure for repeated measures analysis. Upon completion of this filtering, CViewer presents the user with an information message detailing the results of the filtering process.
+
+By integrating the Friedman test alongside the Kruskal-Wallis test in CViewer, researchers can choose the appropriate statistical test based on the nature of their data—Kruskal-Wallis for independent samples and Friedman for repeated measures—ensuring analytical precision.
 
 
 ## Correlation
