@@ -187,7 +187,7 @@ The above steps are demonstrated in the following video:
 [![animation](https://user-images.githubusercontent.com/30604050/89720708-24f85900-d9cd-11ea-8735-aef8cd65e3f4.png)](https://www.youtube.com/watch?v=ql0rcEjPeqs)
 
 
-## Data analytics
+## Data analyses
 
 CViewer, in addition to providing the methods for the visualisation and exploration of the features of contigs in the context of sample coverages, also supports a comprehensive set of multivariate statistical algorithms to allow exploratory as well as hypothesis driven analyses. The provided tools have been simplified and implemented in the form of intuitive workflows tailored to the need of non-expert users. For convenience, all these techniques have been categorised and included in the ```Methods``` tab of the software.
 
@@ -204,9 +204,32 @@ In a way similar to the one described in previous sections, click the **Open** b
 * ```Table:``` to import your abundance table (e.g. CICRA_average_coverages.csv)
 * ```Metadata:``` to import the file with the associated metadata (e.g. CICRA_project_metadata.csv)
 
-**Step 3: Normalising the abundance data**
+**Step 3: Normalization Techniques**
 
-The tool provides a number of popular normalisation techniques for reducing systematic variation in data. In particular, abundance data can be normalised by using a relative or log-relative transformation, a log transformation based on the natural or the base 2 logarithm, or a Pareto scaling (mainly used for normalising metabolomics data). One can only choose one normalisation method at a time by selecting from the ones provided in the given drop-down list located right next to the button that was used for uploading the abundance data.
+The tool offers a variety of popular normalization techniques to reduce systematic variation in data. These techniques include:
+
+- *Relative Transformation*
+- *Log Transformation* (Natural or Base 2 Logarithm)
+- *Log-relative Transformation*
+- *TSS+CLR Transformation*
+- *Pareto Scaling* (Mainly for Metabolomics Data)
+  
+Users can select their desired normalization method from the dropdown list provided next to the data upload button. Each normalization technique serves a specific purpose and can be chosen based on the nature of the data and the analysis requirements.
+
+**TSS+CLR Transformation**:
+
+The TSS+CLR (Total Sum Scaling + Centered Log-Ratio) transformation is a specialized normalization technique designed for handling compositional data. Compositional data represent relative proportions of different parts within a whole and are commonly encountered in fields such as microbiome analysis.
+
+**Total Sum Scaling (TSS)**:
+
+TSS involves scaling each sample so that the total sum of all parts equals a constant value, typically 1. This ensures that the compositional nature of the data is preserved.
+Centered Log-Ratio (CLR):
+
+CLR transformation addresses the issue of compositional data being constrained to a simplex by transforming it into unconstrained space using logarithms. Additionally, CLR centers the data around the geometric mean, reducing the impact of outliers and improving the interpretability of the transformed data.
+
+**Offset for Zeros**:
+
+An offset of 1 is added by default to deal with zeros in the data, preventing mathematical errors during the transformation process.
 
 ## Alpha diversity
 After we have performed the above steps, we can start exploring our data in CViewer. The tool allows alpha diversity analyses and considers a number of popular indices that can be used to assess the microbial diversities within a sample. We have considered the Shannon's (H'), Simpson’s diversity (D1) and its inverse (D2) which account for species richness and abundance. To measure how similar the distributions of species in a community are to each other, the tool provides the Pielou’s evenness. Finally, the relative proportions of the most dominant taxa for a given community dataset can also be explored. In each case, the generated plots can be **customised (e.g. change X-Y axis font size, range etc.) by right-clicking** on the plot and can be extracted into a ```PNG``` file for publication or further research. In the given menu you will find the options described below:
