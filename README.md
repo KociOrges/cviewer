@@ -324,6 +324,9 @@ CViewer's analytical capabilities have been broadened with the implementation of
 By integrating the Friedman test alongside the Kruskal-Wallis test in CViewer, researchers can choose the appropriate statistical test based on the nature of their data—Kruskal-Wallis for independent samples and Friedman for repeated measures—ensuring analytical precision.
 
 
+[![Screen Shot 2024-02-24 at 15 53 48](https://github.com/KociOrges/cviewer/assets/30604050/ce4734ca-03ae-401a-8b46-98064e0e9dd1)](https://youtu.be/IxbSKZ2NJVU?si=hPKpsTj7YZ1Z4HIm)
+
+
 ## Correlation
 We have considered the Pearson’s product-moment coefficient to measure the degree of the association between two continuous variables, the Kendall’s tau coefficient to compare two quantities measured on at least an ordinal scale and the Spearman’s rank-order correlation as the nonparametric alternative of Pearson’s product-moment coefficient. Correlation analysis can be performed between two different data matrices (X and Y) that have the same set of samples in common. For example, after using CViewer to generate the abundance table with the average coverages of clusters across the samples of the input metagenomics dataset, one may want to explore how these clusters are associated with a number of environmental/experimental variables (e.g. pH, bacterial metabolites) that were measured on the same dataset samples and how these associations differentiate between the given treatments groups. 
 
