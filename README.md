@@ -41,7 +41,7 @@ $ unzip Output.zip
 
 **For Intel-based Users (Standard Usage)**
 
-Intel-based users can either double-click the ```CViewer.jar``` file found in the ```cviewer/``` directory or run the following command in your terminal for a more traditional approach:
+Users with Intel-based processors can start CViewer by simply double-clicking the ```CViewer.jar``` file located in the ```cviewer/``` directory. Alternatively, for those who prefer using the terminal, execute the following command within the cviewer/ directory:
 
 ```
 java -jar CViewer.jar
