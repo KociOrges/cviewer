@@ -39,7 +39,44 @@ $ unzip Output.zip
 
 **Step 3: Usage**
 
-Once the software is downloaded, you can start using CViewer right away. This can be done by just double-clicking the executable ```CViewer.jar``` file provided in the directory ```cviewer/```.
+**For Intel-based Users (Standard Usage)**
+
+Intel-based users can either double-click the ```CViewer.jar``` file found in the ```cviewer/``` directory or run the following command in your terminal for a more traditional approach:
+
+```
+java -jar CViewer.jar
+```
+
+**For ARM-based (Apple Silicon) Macs**
+
+Apple Silicon Mac users (e.g., M1 chip) need to take a few extra steps due to architectural differences. This involves unzipping the dependencies.zip file and ensuring you have the compatible JavaFX SDK and Java version for your machine.
+
+****1. Unzipping Additional Dependencies****
+
+Navigate to the cviewer/ directory and unzip the **dependencies.zip** file to include all necessary JavaFX modules and libraries:
+```
+unzip dependencies.zip
+```
+
+****2. Running the Software****
+
+To execute CViewer on Apple Silicon Macs, use the following command, which specifies the necessary JavaFX module path and includes all dependencies:
+
+```
+java --module-path "./dependencies/javafx-sdk-21.0.1" --add-modules javafx.controls,javafx.fxml,org.controlsfx.controls,javafx.swing -cp "CViewer.jar:./dependencies/*:./dependencies/." MainGUI_FX
+```
+
+These dependencies are provided as a workaround for convenience and were tested on an Apple M1 Max with Java version "21.0.1" and JavaFX SDK 21.0.1.
+
+****3. Customizing for Your System****
+
+We recommend downloading the JavaFX SDK and Java version that best match your system's requirements. Ensure the JavaFX version is compatible with your Java version. You can download the JavaFX SDK from [Gluon](https://gluonhq.com/products/javafx/).
+
+Should you need a different version of JavaFX SDK, download it and place it within the dependencies folder. Update the execution command to reflect the path to your downloaded JavaFX SDK version.
+
+****4. Note on Security Permissions****
+
+Depending on your system's security settings, you may need to adjust permissions to allow execution of the CViewer.jar file. If prompted, confirm that you trust the source of this file.
 
 
 ## Visualising the metagenomics contigs
