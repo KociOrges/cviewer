@@ -1,6 +1,6 @@
 <img width="280" height="130" alt="Screenshot 2020-08-10 at 11 30 22" src="https://user-images.githubusercontent.com/30604050/90171121-eed62300-dd98-11ea-9ef2-0336eed842b2.png">
 
-### A Java-based statistical framework for integration of shotgun meta-genomics with other omics datasets
+### A Java-based statistical framework for integration of shotgun metagenomics with other omics datasets
 
 
 #### CViewer is developed by Orges Koci as part of his PhD under the supervision of Dr Umer Zeeshan Ijaz (http://userweb.eng.gla.ac.uk/umer.ijaz/) in his Environmental Omics Lab ([Water & Environment Group](https://www.gla.ac.uk/schools/engineering/research/divisions/i_e/researchthemes/w_e/)) and jointly with the [BINGO Group](https://www.gla.ac.uk/schools/medicine/research/humannutrition/thebingogroup/) with the critical feedbacks by Profs Konstantinos Gerasimidis and Richard Russell who served in his thesis committee. 
