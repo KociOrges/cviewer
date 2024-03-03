@@ -12,6 +12,32 @@
 ## Publication
 - A preprint of this work is now available on bioRxiv: [https://www.biorxiv.org/content/10.1101/2023.06.07.544017v1](https://www.biorxiv.org/content/10.1101/2023.06.07.544017v1)
 
+## Table of Contents
+- [Introduction to CViewer](#introduction-to-cviewer)
+- [Dependencies](#dependencies)
+- [Installation & Usage](#installation--usage)
+  - [For Intel-based Users (Standard Usage)](#for-intel-based-users-standard-usage)
+  - [For ARM-based (Apple Silicon) Macs](#for-arm-based-apple-silicon-macs)
+- [Visualizing the Metagenomics Contigs](#visualizing-the-metagenomics-contigs)
+- [Functional Annotation of the Metagenomics Contigs](#functional-annotation-of-the-metagenomics-contigs)
+- [KEGG Metabolic Pathways](#kegg-metabolic-pathways)
+- [Phylogenetic Diversity](#phylogenetic-diversity)
+- [Data Analyses](#data-analyses)
+  - [Alpha Diversity](#alpha-diversity)
+  - [Beta Diversity](#beta-diversity)
+    - [Principal Component Analysis](#principal-component-analysis)
+    - [Multidimensional Scaling](#multidimensional-scaling)
+    - [Fuzzy Set Ordination](#fuzzy-set-ordination)
+    - [Permutational Multivariate Analysis of Variance](#permutational-multivariate-analysis-of-variance)
+- [Differential Abundance](#differential-abundance)
+  - [Kruskal-Wallis H](#kruskal-wallis-h)
+  - [Friedman Test](#friedman-test)
+- [Correlation](#correlation)
+- [Integrated ‘omics Analysis](#integrated-omics-analysis)
+- [Charts](#charts)
+- [References](#references)
+
+
 ## Introduction to CViewer
 The past few years have seen an increased utility of shotgun metagenomics for microbial community surveys over traditional amplicon sequencing. This is made possible by the technological advancement in methods development that enables us now to assemble short sequence reads into longer contiguous regions that can be binned together to identify species they are part of, e.g., through CONCOCT[[1]](#1). The advantage of shotgun metagenomics is that  coding regions of these contigs can further be annotated against public databases to give an assessment of the functional diversity. With integrated solutions gaining importance by complementing metagenomics with other meta’omics technologies (e.g., metabolomics), there is a need to have a single platform to consolidate all these realisations on the same sample space. Thus, we have developed ```CViewer``` which aims to integrate all levels of gene products, mRNA, protein, metabolites for microbial communities and allows exploration of their response to environmental factors through multivariate statistical analysis. 
  
@@ -79,7 +105,7 @@ Should you need a different version of JavaFX SDK, download it and place it with
 Depending on your system's security settings, you may need to adjust permissions to allow execution of the CViewer.jar file. If prompted, confirm that you trust the source of this file.
 
 
-## Visualising the metagenomics contigs
+## Visualizing the metagenomics contigs
 
 ```CViewer``` integrates with CONCOCT pipeline (https://github.com/BinPro/CONCOCT) for visualising the contigs. The output from CONCOCT can be loaded into the software to inspect the clustering of the contigs across multiple components of the PCA analysis in the context of samples coverages. To explore the contigs in CViewer, first, we will need to obtain the required files from CONCOCT and then import it into the software. Here, as an example, we have put the generated files inside the folder *example_datasets/*. 
 
