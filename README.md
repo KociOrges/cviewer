@@ -63,8 +63,6 @@ $ unzip Utils.zip
 $ unzip Output.zip
 ```
 
-**Step 3: Usage**
-
 ### For Intel-based Users (Standard Usage)
 
 Users with Intel-based processors can start CViewer by simply double-clicking the ```CViewer.jar``` file located in the ```cviewer/``` directory. Alternatively, for those who prefer using the terminal, execute the following command within the ```cviewer/``` directory:
