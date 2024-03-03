@@ -65,7 +65,7 @@ $ unzip Output.zip
 
 **Step 3: Usage**
 
-**For Intel-based Users (Standard Usage)**
+### For Intel-based Users (Standard Usage)**
 
 Users with Intel-based processors can start CViewer by simply double-clicking the ```CViewer.jar``` file located in the ```cviewer/``` directory. Alternatively, for those who prefer using the terminal, execute the following command within the ```cviewer/``` directory:
 
@@ -73,7 +73,7 @@ Users with Intel-based processors can start CViewer by simply double-clicking th
 java -jar CViewer.jar
 ```
 
-**For ARM-based (Apple Silicon) Macs**
+### For ARM-based (Apple Silicon) Macs
 
 Apple Silicon Mac users (e.g., M1 chip) need to take a few extra steps due to architectural differences. This involves unzipping the dependencies.zip file and ensuring you have the compatible JavaFX SDK and Java version for your machine.
 
@@ -361,7 +361,7 @@ This is demonstrated in the video below. We will assume again that you have alre
 
 ## Differential abundance
 
-### 1. Kruskal-Wallis H
+### Kruskal-Wallis H
 Differential abundance analysis can be valuable when investigating for features (e.g. species/metabolic pathways) that discriminate between multiple treatment groups. ```CViewer``` utilizes the Kruskal-Wallis H statistic for this analysis. To enhance the credibility of the analysis amidst the challenge of multiple comparisons, CViewer incorporates the **Benjamini-Hochberg** correction method. This adjustment is crucial as it controls the **false discovery rate (FDR)**, which is the expected proportion of incorrect rejections among all rejected hypotheses. By adjusting P-values to control the proportion of type I errors (false positives) in the context of multiple comparisons, CViewer makes it less likely for users to mistakenly identify significant differences when there are none. This approach addresses the concern of false discovery in datasets with no real biological signal. In addition, pairwise significances between the groups can be explored with the Dunn’s post hoc procedure. The hypotheses to be tested can be uploaded in the software in the form of a .csv file containing hypotheses as headers along with additional metadata on the samples describing the treatment groups. One can then easily navigate through the list of available hypotheses and choose the one to be tested with the Kruskal-Wallis statistic. Finally, significant features are visualised in the form of box plots with appropriate colouring to indicate the treatment groups along with the P-values to report significance. The test provides the following options:
 
 * ```P-Value:``` the P-value cut-off of the test
@@ -375,7 +375,7 @@ The example below illustrates how the above options are used in CViewer in order
 
 [![animation](https://user-images.githubusercontent.com/30604050/89682931-75998480-d8ef-11ea-83c8-9548bcccf567.png)](https://www.youtube.com/watch?v=dTCAzbKhezg)
 
-### 2. Friedman Test
+### Friedman Test
 CViewer's analytical capabilities have been broadened with the implementation of the Friedman test, a non-parametric statistical test for detecting differences in treatments across multiple test attempts. This enhancement specifically addresses the complexities associated with repeated measures data, where the same subjects are exposed to different conditions over time or space. The test provides the following key features and implementation:
 
 * ```Post-hoc test:``` To delve deeper into the specific treatment pairs that drive the observed differences, CViewer offers pairwise comparisons using Conover's F. This method adjusts for multiple comparisons and provides detailed insights into which treatments significantly differ from each other, enhancing the interpretability of the Friedman test results.
