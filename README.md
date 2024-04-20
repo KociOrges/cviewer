@@ -337,12 +337,12 @@ In fuzzy set ordination, samples are assigned gradual membership values (fuzzy) 
 
 * ```Experimental variables:``` a ```CSV``` table describing the available experimental/environmental variables (Euclidean, Bray-Curtis and Jaccard) such as pH, Temperature, Calprotectin levels etc.
 * ```Similarity index:``` a drop-down menu with the available similarity indices (Baroni-Urbani & Buser, Horn and Yule)
-* ```Variable:``` field used to specify the environmetal variable of interest
+* ```Variable:``` field used to specify the environmental variable of interest
 * ```Group by:``` the labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
 * ```Permutations:``` the number of permutations to be used for deriving the ***p-values*** (typically 1000)
 * ```Panel:``` which panel (upper left/right and bottom left/right) should be used for plotting the results
 
-In this example, we will assume again that you have already imported the required data, i.e. abundance table and metadata, into the software. Let's say that we are then interested in exploring if e.g. there is an association between the community composition of the gut microbiome of Crohn's disease patients with calprotectin levels or with the levels of SCFAs and how this differs between patients who achieved or not clinical remission at the end of EEN treatment (point D). Then, the video belows shows how FSO is performed for inspecting this in CViewer:
+In this example, we will assume again that you have already imported the required data, i.e. abundance table and metadata, into the software. Let's say that we are then interested in exploring if e.g. there is an association between the community composition of the gut microbiome of Crohn's disease patients with calprotectin levels or with the levels of SCFAs and how this differs between patients who achieved or not clinical remission at the end of EEN treatment (point D). Then, the video below shows how FSO is performed for inspecting this in CViewer:
 [![animation](https://user-images.githubusercontent.com/30604050/89131615-03e3c400-d506-11ea-8d08-b388771c1c09.png)](https://www.youtube.com/watch?v=_028HSzxUdw)
 
 ### Permutational Multivariate Analysis of Variance
@@ -369,18 +369,22 @@ Differential abundance analysis can be valuable when investigating for features 
 * ```Group by:``` the labels for the dataset samples as described in the metadata file (e.g. CICRA_project_metadata.csv)
 * ```Panel:``` which panel (upper left/right and bottom left/right) should be used for plotting the results
 
-The example below illustrates how the above options are used in CViewer in order to perform differential abundance analysis. We will assume that you have already imported the required data, i.e. the abundance table and the metadata. Now, let's say that we are interested in exploring, e.g., whether any species (CONCOCT clusters) in the gut microbiome of CD patients changes significantly in abundance during the EEN treamtent, and how this differs from the healthy baseline:
+The example below illustrates how the above options are used in CViewer in order to perform differential abundance analysis. We will assume that you have already imported the required data, i.e. the abundance table and the metadata. Now, let's say that we are interested in exploring, e.g., whether any species (CONCOCT clusters) in the gut microbiome of CD patients changes significantly in abundance during the EEN treatment, and how this differs from the healthy baseline:
 
 [![animation](https://user-images.githubusercontent.com/30604050/89682931-75998480-d8ef-11ea-83c8-9548bcccf567.png)](https://www.youtube.com/watch?v=dTCAzbKhezg)
 
 ### Friedman Test
-CViewer's analytical capabilities have been broadened with the implementation of the Friedman test, a non-parametric statistical test for detecting differences in treatments across multiple test attempts. This enhancement specifically addresses the complexities associated with repeated measures data, where the same subjects are exposed to different conditions over time or space. The test provides the following key features and implementation:
+The enhancement of CViewer's analytical capabilities now includes the implementation of the Friedman test, a non-parametric statistical test for detecting differences in treatments across multiple test attempts. This update specifically addresses the complexities associated with repeated measures data, where the same subjects are exposed to different conditions over time or space. The test provides the following key features and implementation:
 
-* ```Post-hoc test:``` To delve deeper into the specific treatment pairs that drive the observed differences, CViewer offers pairwise comparisons using Conover's F. This method adjusts for multiple comparisons and provides detailed insights into which treatments significantly differ from each other, enhancing the interpretability of the Friedman test results.
+* ```Post-hoc test:``` To delve deeper into the specific treatment pairs that drive the observed differences, CViewer offers pairwise comparisons using Dunn's test providing detailed insights into which treatments significantly differ from each other, enhancing the interpretability of the Friedman test results.
+
+* ```Adjust P-Values:``` whether P-Values should be adjusted to account for multiple comparisons. Enables the adjustment of P-Values using the **Benjamini-Hochberg** correction to account for the risk of false discoveries due to multiple comparisons.
 
 * ```Block by:``` In addition to the "Group by" functionality, which organizes samples based on treatment groups, the "Block by" option allows users to block the samples. This feature is essential for the Friedman test, enabling the analysis to account for the blocking factor that represents the subjects across which measurements are repeated. Blocking helps control for variability between subjects, ensuring that the differences detected are attributable to the treatments rather than inherent subject differences.
 
 * ```Data Filtering and Information Message:``` CViewer performs internal data filtering to ensure the applicability of the Friedman test. This process includes checks for missing values and the appropriateness of the data structure for repeated measures analysis. Upon completion of this filtering, CViewer presents the user with an information message detailing the results of the filtering process.
+
+* ```Results Output:```The test results are systematically presented in a CSV file format. Results highlight features with p-values (adjusted if applicable) below the threshold and are sorted in ascending order by p-value. The Friedman statistic corrected for ties *(H')* and results of Dunn's pairwise comparisons (if applied) marked with asterisks to denote significant differences are also included. The results are stored in the ```Output/ directory``` for user access.
 
 By integrating the Friedman test alongside the Kruskal-Wallis test in CViewer, researchers can choose the appropriate statistical test based on the nature of their data—Kruskal-Wallis for independent samples and Friedman for repeated measures—ensuring analytical precision.
 
