@@ -384,7 +384,7 @@ The enhancement of CViewer's analytical capabilities now includes the implementa
 
 * ```Data Filtering and Information Message:``` CViewer performs internal data filtering to ensure the applicability of the Friedman test. This process includes checks for missing values and the appropriateness of the data structure for repeated measures analysis. Upon completion of this filtering, CViewer presents the user with an information message detailing the results of the filtering process.
 
-* ```Results Output:```The test results are systematically presented in a CSV file format. Results highlight features with p-values (adjusted if applicable) below the threshold and are sorted in ascending order by p-value. The Friedman statistic corrected for ties *(H')* and results of Dunn's pairwise comparisons (if applied) marked with asterisks to denote significant differences are also included. The results are stored in the ```Output/ directory``` for user access.
+* ```Results Output:```The test results are systematically presented in a CSV file format. Results highlight features with p-values (adjusted if applicable) below the threshold and are sorted in ascending order by p-value. The Friedman statistic corrected for ties *(H')* and results of Dunn's pairwise comparisons (if applied) marked with asterisks to denote significant differences are also included. The results are stored in the ```Output/``` directory for user access.
 
 By integrating the Friedman test alongside the Kruskal-Wallis test in CViewer, researchers can choose the appropriate statistical test based on the nature of their data—Kruskal-Wallis for independent samples and Friedman for repeated measures—ensuring analytical precision.
 
