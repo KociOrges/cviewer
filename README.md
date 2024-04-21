@@ -389,7 +389,7 @@ The enhancement of CViewer's analytical capabilities now includes the implementa
 By integrating the Friedman test alongside the Kruskal-Wallis test in CViewer, researchers can choose the appropriate statistical test based on the nature of their data—Kruskal-Wallis for independent samples and Friedman for repeated measures—ensuring analytical precision.
 
 
-[![Picture 1](https://github.com/KociOrges/cviewer/assets/30604050/4910bbb3-16b6-4fad-aeb7-1e6aed496577)](https://youtu.be/IxbSKZ2NJVU?si=hPKpsTj7YZ1Z4HIm)
+[![Picture 1](https://github.com/KociOrges/cviewer/assets/30604050/4910bbb3-16b6-4fad-aeb7-1e6aed496577)](https://youtu.be/WgGwZdBQEp0?si=-NUJLs7ELeuKzhnt)
 
 
 ## Correlation
