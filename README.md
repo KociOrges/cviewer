@@ -1,4 +1,4 @@
-<img width="280" height="260" alt="Screenshot 2020-08-10 at 11 30 22" src="https://github.com/KociOrges/cviewer/blob/master/documentation/cviewer-logo-minimal.png">
+<img width="280" height="280" alt="Screenshot 2020-08-10 at 11 30 22" src="https://github.com/KociOrges/cviewer/blob/master/documentation/cviewer-logo-minimal.png">
 
 ### A Java-based statistical framework for integration of shotgun metagenomics with other omics datasets
 
