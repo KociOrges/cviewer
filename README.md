@@ -11,7 +11,6 @@
 
 ## Publication
 
-### Please cite
 - If you use ```CViewer``` in your publication, please cite:
 
   Koci, O., Russell, R.K., Shaikh, M.G. et al. CViewer: a Java-based statistical framework for integration of shotgun metagenomics with other omics datasets. Microbiome 12, 117 (2024). https://doi.org/10.1186/s40168-024-01834-9
